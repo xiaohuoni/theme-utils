@@ -72,8 +72,10 @@ export function insertRules(
     const style = document.createElement('style');
     style.id = id;
     (selector ?? document.head).appendChild(style);
+    style!.innerHTML = rules;
+  } else {
+    style!.innerHTML = rules;
   }
-  style!.innerHTML = rules;
 }
 
 export function insertLink(id: string, href: string, insertBefore = false) {
