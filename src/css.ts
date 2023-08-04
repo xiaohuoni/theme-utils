@@ -1,6 +1,7 @@
 import { compile, stringify, serialize } from 'stylis';
 
 export function stringifyCss(tpl: string, values: any) {
+  if(!tpl) return '';
   let result = tpl;
 
   for (const key in values) {
@@ -13,6 +14,7 @@ export function stringifyCss(tpl: string, values: any) {
 }
 
 export function parseCss(tpl: string, a: string) {
+  if(!tpl) return {};
   const tplRegex = /\.(\w+)\s*{\s*(.*?)\s*}/g;
   const tplMatches = [...tpl.matchAll(tplRegex)];
 

@@ -1,6 +1,6 @@
 {
   "name": "theme-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "build": "father build",
+    "test": "esno a.ts",
     "format": "prettier --write .",
     "postinstall": "cd demo && pnpm i"
   },
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@types/stylis": "^4.2.0",
+    "esno": "^0.17.0",
     "father": "^4.3.0",
     "prettier": "^2.6.2",
     "prettier-plugin-organize-imports": "^2.3.4",

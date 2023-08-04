@@ -1,8 +1,10 @@
 import { stringifyCss, parseCss } from './css';
+import { objToListByGroupsName } from './utils';
 
-export const LX_ASSETS_CSS_TPL: any = {
+export const ASSETS_CSS_TPL: any = {
   // 演示，并非真正的组件
   Root: {
+    type: 'Root',
     var: {
       backgroundColor: { type: 'color', label: '背景颜色', groupsName: '背景' },
       fontSize: { type: 'px', label: '文本字号', groupsName: '标签统一设置' },
@@ -10,10 +12,13 @@ export const LX_ASSETS_CSS_TPL: any = {
         type: 'select',
         label: '边框圆角',
         groupsName: '组件统一设置',
+        desc: '说明',
         options: ['2px', '3px', '5px'],
       },
     },
-    title: '跟节点',
+    groupsName: '页面',
+    icon: 'root',
+    title: '根节点',
     default: [
       {
         backgroundColor: 'red',
@@ -26,18 +31,39 @@ export const LX_ASSETS_CSS_TPL: any = {
         borderLeftWidth: '5px',
       },
     ],
-    css: '.engine-dynamicPage-view_box>div{ background-color: backgroundColor; font-size:fontSize; border-left-width:borderLeftWidth; }',
+    tpl: '.engine-dynamicPage-view_box>div{ background-color: backgroundColor; font-size:fontSize; border-left-width:borderLeftWidth; }',
+  },
+  RootItem: {
+    canEdit: false,
+    extends: 'Root',
+    var: {
+      backgroundColor: { type: 'color', label: '背景颜色', groupsName: '背景' },
+      fontSize: { type: 'px', label: '文本字号', groupsName: '标签统一设置' },
+      borderLeftWidth: {
+        type: 'select',
+        label: '边框圆角',
+        groupsName: '组件统一设置',
+        options: ['2px', '3px', '5px'],
+      },
+    },
+    title: '子节点',
   },
 };
 
-export function stringifyCssByType(type: string, values: any) {
-  const item = LX_ASSETS_CSS_TPL[type];
-  if (!item) return '';
-  return stringifyCss(item.css, values);
+export const ASSETS_COMPONENT_LIST = objToListByGroupsName(Object.values(ASSETS_CSS_TPL));
+
+export function getItemByType (type:string,) {
+  const com = ASSETS_CSS_TPL[type];
+  if(!type || !com) return {tpl:''};
+  return com;
 }
 
-export function parseCssByType(type: string, css: string) {
-  const item = LX_ASSETS_CSS_TPL[type];
-  if (!item) return {};
-  return parseCss(item.css, css);
+export function stringifyCssByType(type:string, values: any) {
+  const item = getItemByType(type);
+  return stringifyCss(item.tpl, values);
+}
+
+export function parseCssByType(type:string, css: string) {
+  const item = getItemByType(type);
+  return parseCss(item.tpl, css);
 }
