@@ -1,10 +1,10 @@
-import { Button } from '@lingxiteam/pcfactory/es/index.component';
+import { Icon } from '@lingxiteam/pcfactory/es/index.component';
+import * as indexConfig from '@lingxiteam/pcfactory/es/index.config';
 import { Button as AntdBtn, ConfigProvider } from 'antd';
 import { useRef } from 'react';
-import { insertRules, normalizeCSS, stringifyCssByType } from '../../../../src';
-import { Button as config } from '../../../../src/config/Button';
-
-const comConfig = {};
+import { insertRules, normalizeCSS, stringifyCssByType } from '../../../src';
+import { Icon as config } from '../../../src/config/Icon';
+const { Icon: comConfig } = indexConfig.default;
 
 function Page({}) {
   const ref = useRef(null);
@@ -12,15 +12,17 @@ function Page({}) {
     <ConfigProvider prefixCls="pcfactory">
       <AntdBtn
         onClick={() => {
-          const css = stringifyCssByType('Button', config.default[0]);
+          const css = stringifyCssByType('Icon', config.default[0]);
           const css1 = normalizeCSS(css, '#previewId');
+          console.log(css1);
           insertRules('id', css1, ref.current!);
         }}
       >
         注入
       </AntdBtn>
       <div id="previewId" ref={ref}>
-        <Button name="123" type="primary" {...comConfig}></Button>
+        {/* @ts-ignore */}
+        <Icon {...comConfig.props}></Icon>
       </div>
     </ConfigProvider>
   );

@@ -1,10 +1,10 @@
-import { Button } from '@lingxiteam/pcfactory/es/index.component';
+import { Text } from '@lingxiteam/pcfactory/es/index.component';
 import { Button as AntdBtn, ConfigProvider } from 'antd';
 import { useRef } from 'react';
-import { insertRules, normalizeCSS, stringifyCssByType } from '../../../../src';
-import { Button as config } from '../../../../src/config/Button';
-
-const comConfig = {};
+import { insertRules, normalizeCSS, stringifyCssByType } from '../../../src';
+import { Text as config } from '../../../src/config/Text';
+import * as indexConfig from '@lingxiteam/pcfactory/es/index.config';
+const { Text: comConfig } = indexConfig.default;
 
 function Page({}) {
   const ref = useRef(null);
@@ -12,15 +12,17 @@ function Page({}) {
     <ConfigProvider prefixCls="pcfactory">
       <AntdBtn
         onClick={() => {
-          const css = stringifyCssByType('Button', config.default[0]);
+          const css = stringifyCssByType('Text', config.default[0]);
           const css1 = normalizeCSS(css, '#previewId');
+          console.log(css1);
           insertRules('id', css1, ref.current!);
         }}
       >
         注入
       </AntdBtn>
       <div id="previewId" ref={ref}>
-        <Button name="123" type="primary" {...comConfig}></Button>
+        {/* @ts-ignore */}
+        <Text {...comConfig.props}></Text>
       </div>
     </ConfigProvider>
   );

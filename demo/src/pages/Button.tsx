@@ -1,10 +1,10 @@
 import { Button } from '@lingxiteam/pcfactory/es/index.component';
 import { Button as AntdBtn, ConfigProvider } from 'antd';
 import { useRef } from 'react';
-import { insertRules, normalizeCSS, stringifyCssByType } from '../../../../src';
-import { Button as config } from '../../../../src/config/Button';
-
-const comConfig = {};
+import { insertRules, normalizeCSS, stringifyCssByType } from '../../../src';
+import { Button as config } from '../../../src/config/Button';
+import * as indexConfig from '@lingxiteam/pcfactory/es/index.config';
+const { Button: comConfig } = indexConfig.default;
 
 function Page({}) {
   const ref = useRef(null);
@@ -20,7 +20,8 @@ function Page({}) {
         注入
       </AntdBtn>
       <div id="previewId" ref={ref}>
-        <Button name="123" type="primary" {...comConfig}></Button>
+        {/* @ts-ignore */}
+        <Button {...comConfig.props}></Button>
       </div>
     </ConfigProvider>
   );

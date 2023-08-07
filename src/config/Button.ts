@@ -29,8 +29,7 @@ export const Button = {
       marginValue: '0px',
     },
   ],
-  tpl: `.ued-button-wrap{
-      .pcfactory-btn{ 
+  tpl: `.ued-button-wrap.pcfactory-btn {
         color: textColor;
         line-height: lineHeight;
         font-size: fontSize;
@@ -40,5 +39,5 @@ export const Button = {
         padding: paddingValue;
         margin: marginValue;
       }
-    }`,
+    `,
 };
