@@ -45,11 +45,11 @@ export const Container = {
   title: '容器',
   default: [
     {
-      textColor: '#1c242e',
+      textColor: '#000',
       lineHeight: '0px',
       fontSize: '14px',
       fontWeight: '500',
-      borderColor: '#D8E0EC',
+      borderColor: '#E8E8E8',
       borderRadius: '8px',
     },
   ],
