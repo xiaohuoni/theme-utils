@@ -6,12 +6,18 @@ import { Button } from './config/Button';
 import { Icon } from './config/Icon';
 import { Link } from './config/Link';
 import { Divider } from './config/Divider';
+import { Container } from './config/Container';
+import { Form } from './config/Form';
+import { Input } from './config/Input';
 
 export const ASSETS_CSS_TPL: any = {
   Button,
   Link,
   Icon,
   Divider,
+  Container,
+  Form,
+  Input,
 };
 
 export const ASSETS_COMPONENT_LIST = objToListByGroupsName(

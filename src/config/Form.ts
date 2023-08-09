@@ -11,6 +11,7 @@ export const Form = {
       label: '边框颜色',
       groupsName: '边框',
       canEdit: false,
+      extends: 'Container',
       desc: '继承自容器，此处不可编辑',
     },
     borderRadius: {
@@ -18,6 +19,7 @@ export const Form = {
       label: '边框圆角',
       groupsName: '边框',
       canEdit: false,
+      extends: 'Container',
       desc: '继承自容器，此处不可编辑',
     },
     labelTextColor: {
