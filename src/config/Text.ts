@@ -1,6 +1,6 @@
 export const Text = {
   type: 'Text',
-  var: {
+  variable: {
     textColor: { type: 'color', label: '文本颜色', groupsName: '文字' },
     lineHeight: { type: 'px', label: '文本行高', groupsName: '文字' },
     fontSize: { type: 'px', label: '文本尺寸', groupsName: '文字' },
@@ -8,7 +8,7 @@ export const Text = {
   groupsName: '通用',
   icon: 'Text',
   title: '文本',
-  default: [
+  defaultValue: [
     {
       textColor: '#1c242e',
       lineHeight: '0px',
@@ -16,4 +16,5 @@ export const Text = {
     },
   ],
   tpl: ``,
+  components: [],
 };

@@ -9,13 +9,13 @@ fs.access(outPut, fs.constants.F_OK, (err) => {
   if (err) {
     const tpl = `export const ${type} = {
     type: '${type}',
-    var: {
+    variable: {
       fontSize: { type: 'px', label: '尺寸', groupsName: '文字' },
     },
     groupsName: '${groupName}',
     icon: '${type}',
     title: '${title || type}',
-    default: [
+    defaultValue: [
       {
         fontSize: '14px',
       },

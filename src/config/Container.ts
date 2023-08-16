@@ -1,6 +1,6 @@
 export const Container = {
   type: 'Container',
-  var: {
+  variable: {
     textColor: {
       type: 'color',
       label: '标题文本颜色',
@@ -43,7 +43,7 @@ export const Container = {
   icon: 'Container',
   desc: '边框配置对布局容器、表单容器、普通容器、卡片、折叠面板、标签页和表格均生效；文字配置对卡片标题、折叠面板标题、表格头部标题生效',
   title: '容器',
-  default: [
+  defaultValue: [
     {
       textColor: '#000',
       lineHeight: '0px',
@@ -92,4 +92,5 @@ export const Container = {
       font-size: fontSize;
       font-weight: fontWeight;
     }`,
+  components: [],
 };

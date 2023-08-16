@@ -1,6 +1,6 @@
 export const Input = {
   type: 'Input',
-  var: {
+  variable: {
     labelTextColor: {
       type: 'color',
       label: '标签文本颜色',
@@ -61,6 +61,7 @@ export const Input = {
   groupsName: '数据录入',
   icon: 'Input',
   title: '输入框',
-  default: [{}],
+  defaultValue: [{}],
   tpl: ``,
+  components: [],
 };

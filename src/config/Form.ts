@@ -1,6 +1,6 @@
 export const Form = {
   type: 'Form',
-  var: {
+  variable: {
     backgroundColor: {
       type: 'color',
       label: '背景颜色',
@@ -68,7 +68,7 @@ export const Form = {
   groupsName: '容器',
   icon: 'Form',
   title: '表单',
-  default: [
+  defaultValue: [
     {
       backgroundColor: '#fff',
     },
@@ -165,4 +165,5 @@ export const Form = {
       font-size: fontSize;
     }
     `,
+  components: [],
 };

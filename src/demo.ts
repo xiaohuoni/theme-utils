@@ -5,7 +5,7 @@ export const ASSETS_CSS_TPL: any = {
   // 演示，并非真正的组件
   Root: {
     type: 'Root',
-    var: {
+    variable: {
       backgroundColor: { type: 'color', label: '背景颜色', groupsName: '背景' },
       fontSize: { type: 'px', label: '文本字号', groupsName: '标签统一设置' },
       borderLeftWidth: {
@@ -19,7 +19,7 @@ export const ASSETS_CSS_TPL: any = {
     groupsName: '页面',
     icon: 'root',
     title: '根节点',
-    default: [
+    defaultValue: [
       {
         backgroundColor: 'red',
         fontSize: '12px',
@@ -36,7 +36,7 @@ export const ASSETS_CSS_TPL: any = {
   RootItem: {
     canEdit: false,
     extends: 'Root',
-    var: {
+    variable: {
       backgroundColor: { type: 'color', label: '背景颜色', groupsName: '背景' },
       fontSize: { type: 'px', label: '文本字号', groupsName: '标签统一设置' },
       borderLeftWidth: {

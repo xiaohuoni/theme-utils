@@ -1,6 +1,6 @@
 export const Link = {
   type: 'Link',
-  var: {
+  variable: {
     textColor: { type: 'color', label: '文本颜色', groupsName: '文字' },
     lineHeight: { type: 'px', label: '文本行高', groupsName: '文字' },
     fontSize: { type: 'px', label: '文本尺寸', groupsName: '文字' },
@@ -8,7 +8,7 @@ export const Link = {
   groupsName: '通用',
   icon: 'Link',
   title: '超链接',
-  default: [
+  defaultValue: [
     {
       textColor: '#1890ff',
       lineHeight: '0px',
@@ -20,4 +20,5 @@ export const Link = {
       line-height: lineHeight;
       font-size: fontSize;
     }`,
+  components: [],
 };

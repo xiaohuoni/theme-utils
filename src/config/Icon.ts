@@ -1,12 +1,12 @@
 export const Icon = {
   type: 'Icon',
-  var: {
+  variable: {
     iconSize: { type: 'px', label: '尺寸', groupsName: '文字' },
   },
   groupsName: '通用',
   icon: 'Icon',
   title: '图标',
-  default: [
+  defaultValue: [
     {
       iconSize: '14px',
     },
@@ -15,4 +15,5 @@ export const Icon = {
       width: iconSize;
       height: iconSize;
     }`,
+  components: [],
 };
