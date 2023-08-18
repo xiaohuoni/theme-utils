@@ -7,7 +7,7 @@ export const Input = {
       groupsName: '文字',
       desc: '继承自表单，此处不可编辑',
       canEdit: false,
-      extends: 'Form',
+      extendsKey: 'Form',
     },
     labelLineHeight: {
       type: 'px',
@@ -15,7 +15,7 @@ export const Input = {
       groupsName: '文字',
       desc: '继承自表单，此处不可编辑',
       canEdit: false,
-      extends: 'Form',
+      extendsKey: 'Form',
     },
     labelFontSize: {
       type: 'px',
@@ -23,7 +23,7 @@ export const Input = {
       groupsName: '文字',
       desc: '继承自表单，此处不可编辑',
       canEdit: false,
-      extends: 'Form',
+      extendsKey: 'Form',
     },
     textColor: {
       type: 'color',
@@ -31,7 +31,7 @@ export const Input = {
       groupsName: '文字',
       desc: '继承自表单，此处不可编辑',
       canEdit: false,
-      extends: 'Form',
+      extendsKey: 'Form',
     },
     fontSize: {
       type: 'px',
@@ -39,7 +39,7 @@ export const Input = {
       groupsName: '文字',
       desc: '继承自表单，此处不可编辑',
       canEdit: false,
-      extends: 'Form',
+      extendsKey: 'Form',
     },
     itemBorderColor: {
       type: 'color',
@@ -47,7 +47,7 @@ export const Input = {
       groupsName: '边框',
       desc: '继承自表单，此处不可编辑',
       canEdit: false,
-      extends: 'Form',
+      extendsKey: 'Form',
     },
     itemBorderRadius: {
       type: 'px',
@@ -55,7 +55,7 @@ export const Input = {
       groupsName: '边框',
       desc: '继承自表单，此处不可编辑',
       canEdit: false,
-      extends: 'Form',
+      extendsKey: 'Form',
     },
   },
   groupsName: '数据录入',

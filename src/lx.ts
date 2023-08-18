@@ -9,15 +9,20 @@ import { Divider } from './config/Divider';
 import { Container } from './config/Container';
 import { Form } from './config/Form';
 import { Input } from './config/Input';
+import { Card } from './config/Card';
+import { Collapse } from './config/Collapse';
+import { Tabs } from './config/Tabs';
 
 export const ASSETS_CSS_TPL: any = {
   Button,
-  Link,
-  Icon,
-  Divider,
   Container,
   Form,
-  Input,
+  Card,
+  Collapse,
+  Tabs,
+  Icon,
+  Link,
+  Divider,
 };
 
 export const ASSETS_COMPONENT_LIST = objToListByGroupsName(

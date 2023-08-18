@@ -35,7 +35,7 @@ export const ASSETS_CSS_TPL: any = {
   },
   RootItem: {
     canEdit: false,
-    extends: 'Root',
+    extendsKey: 'Root',
     variable: {
       backgroundColor: { type: 'color', label: '背景颜色', groupsName: '背景' },
       fontSize: { type: 'px', label: '文本字号', groupsName: '标签统一设置' },

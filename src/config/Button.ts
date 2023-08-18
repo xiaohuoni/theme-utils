@@ -22,24 +22,46 @@ export const Button = {
       textColor: '#1c242e',
       lineHeight: '0px',
       fontSize: '14px',
-      backgroundColor: '#fff',
+      backgroundColor: '#47e',
       borderColor: '#D8E0EC',
       borderRadius: '8px',
       paddingValue: '4px 24px 4px 24px',
       marginValue: '0px',
     },
   ],
-  tpl: `.ued-button-wrap.pcfactory-btn {
-        color: textColor;
-        line-height: lineHeight;
-        font-size: fontSize;
-        background-color: backgroundColor;
-        border-color: borderColor;
-        border-radius: borderRadius;
-        padding: paddingValue;
-        margin: marginValue;
-      }
-    `,
+  tpl: `
+    .ued-button-wrap.pcfactory-btn {
+      line-height: lineHeight;
+      font-size: fontSize;
+      padding: paddingValue;
+      margin: marginValue;
+    }
+  .ued-button-wrap.pcfactory-btn-primary {
+      background-color: backgroundColor;
+      border-color: borderColor;
+      border-radius: borderRadius;
+    }
+    .ued-button-wrap.pcfactory-btn-default {
+      color: textColor;
+      border-color: borderColor;
+      border-radius: borderRadius;
+    }
+    .ued-button-wrap.pcfactory-btn-dashed {
+      color: textColor;
+      border-color: borderColor;
+      border-radius: borderRadius;
+    }
+    .ued-button-wrap.pcfactory-btn.pcfactory-btn-dashed:hover, .ued-button-wrap.pcfactory-btn.pcfactory-btn-default:hover {
+      border-color: backgroundColor;
+      color: backgroundColor;
+  }
+    .ued-button-wrap.pcfactory-btn-text {
+      color: textColor;
+    }
+    .ued-button-wrap.pcfactory-btn-link {
+      color: backgroundColor;
+    }
+  `,
   components: [
     {
       id: 'Button_726243',
@@ -68,13 +90,8 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontSize: 14,
         fontWeight: 400,
         height: '32px',
-        color: '#FFF',
-        borderSetting: 'border 1px solid ',
-        backgroundColor: '',
-        border: '1px solid ',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -117,10 +134,8 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontSize: 14,
         fontWeight: 400,
         height: '32px',
-        color: '#1C242E',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -163,13 +178,8 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontSize: 14,
         fontWeight: 400,
         height: '32px',
-        color: '#1C242E',
-        borderSetting: 'border 1px dashed #E5E5E5',
-        backgroundColor: '#FFF',
-        border: '1px dashed #E5E5E5',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -212,13 +222,8 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontSize: 14,
         fontWeight: 400,
         height: '32px',
-        color: '#1C242E',
-        borderSetting: '',
-        backgroundColor: '#FFF',
-        border: '',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -261,13 +266,8 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontSize: 14,
         fontWeight: 400,
         height: '32px',
-        color: '#47E',
-        borderSetting: '',
-        backgroundColor: '',
-        border: '',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -281,7 +281,6 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['8485714', 'View_8485714_1'],
     },
   ],
 };

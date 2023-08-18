@@ -2,8 +2,13 @@ import { join } from 'path';
 import fs from 'fs';
 
 const argv = process.argv.slice(2);
-const [type, title, groupName = '通用'] = argv;
-const configPath = join(__dirname, '..', 'src', 'config');
+const [type, title, groupName = '通用', isMobile] = argv;
+const configPath = join(
+  __dirname,
+  '..',
+  'src',
+  !!isMobile ? 'h5config' : 'config',
+);
 const outPut = join(configPath, `${type}.ts`);
 fs.access(outPut, fs.constants.F_OK, (err) => {
   if (err) {

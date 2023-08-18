@@ -80,7 +80,9 @@ npm-debug.log*
 yarn-error.log
 package-lock.json
 .eslintcache
-
+**/.yarn/*
+!.yarn/releases
+!.yarn/plugins
 # production
 dist
 lib
