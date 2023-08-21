@@ -6,6 +6,9 @@ export const MOBILE_ASSETS_CSS_TPL: any = {
   Button,
 };
 
+const extend: any = {
+
+};
 export const MOBILE_ASSETS_COMPONENT_LIST = objToListByGroupsName(
   Object.values(MOBILE_ASSETS_CSS_TPL),
 );
@@ -45,6 +48,22 @@ export function parseValueRem(values: any) {
   });
   return values;
 }
+
+// 临时解决方案，将只对它有影响的值，生成继承的样式
+export function stringifyMobileCssByTypePreview(type: string, values: any) {
+  if (extend[type]) {
+    const cfg = getMobileItemByType(extend[type]);
+    const item = getMobileItemByType(type);
+    return (
+      stringifyCss(cfg.tpl, { ...cfg.defaultValue[0], ...values }) +
+      stringifyCss(item.tpl, values)
+    );
+  } else {
+    const item = getMobileItemByType(type);
+    return stringifyCss(item.tpl, values);
+  }
+}
+
 export function stringifyMobileCssByType(type: string, values: any) {
   const item = getMobileItemByType(type);
   return stringifyCss(item.tpl, parseValueRem(values));
