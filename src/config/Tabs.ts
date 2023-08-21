@@ -92,7 +92,7 @@ export const Tabs = {
     },
   },
   groupsName: '容器',
-  icon: 'Tabs',
+  icon: 'icon-ico-comp-tabs',
   title: '标签页',
   defaultValue: [
     {

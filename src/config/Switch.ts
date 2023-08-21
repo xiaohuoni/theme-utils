@@ -1,5 +1,5 @@
-export const Input = {
-  type: 'Input',
+export const Switch = {
+  type: 'Switch',
   variable: {
     labelTextColor: {
       type: 'color',
@@ -25,44 +25,32 @@ export const Input = {
       canEdit: false,
       extendsKey: 'Form',
     },
-    textColor: {
+    openColor: {
       type: 'color',
-      label: '文本颜色',
+      label: '开启颜色',
       groupsName: '文字',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
     },
-    fontSize: {
-      type: 'px',
-      label: '文本尺寸',
-      groupsName: '文字',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
-    },
-    itemBorderColor: {
+    closeColor: {
       type: 'color',
-      label: '边框颜色',
-      groupsName: '边框',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
-    },
-    itemBorderRadius: {
-      type: 'px',
-      label: '边框圆角',
-      groupsName: '边框',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
+      label: '关闭颜色',
+      groupsName: '文字',
     },
   },
   groupsName: '数据录入',
-  icon: 'icon-ico-comp-ipt',
-  title: '输入框',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-switch',
+  title: '开关',
+  defaultValue: [
+    {
+      openColor: '#47e',
+      closeColor: 'rgba(28,36,46,.25)',
+    },
+  ],
+  tpl: `.pcfactory-switch {
+      background-color: closeColor;
+    }
+    .pcfactory-switch-checked {
+      background-color: openColor;
+    }`,
   components: [
     {
       id: 'Form_180373',
@@ -104,32 +92,39 @@ export const Input = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'Input_3203017',
-          label: '输入框',
-          compName: 'Input',
-          type: 'Input',
+          id: 'Switch_088117',
+          label: '开关',
+          compName: 'Switch',
+          type: 'Switch',
           compType: 2,
           compLib: 'comm',
           props: {
-            name: '输入框',
-            basicStatus: 1,
+            name: '开关',
             size: 'default',
             labelCol: 8,
             wrapperCol: 16,
+            basicStatus: 1,
             titleTip: 'notext',
-            tipContent: '',
             tipSize: 'default',
             tipWidth: '240px',
             tipHeight: 'auto',
-            prefixIconPosition: 'before',
-            postfix: '',
-            postfixIconPosition: 'before',
+            switchStyle: 'none',
+            checkedChildren: '开启',
+            unCheckedChildren: '关闭',
+            checkedChildrenIcon: {
+              type: 'check',
+              theme: 'outlined',
+              isIconFont: false,
+            },
+            unCheckedChildrenIcon: {
+              type: 'close',
+              theme: 'outlined',
+              isIconFont: false,
+            },
             required: false,
-            placeholder: '请输入',
-            allowClear: true,
-            dataMask: '',
-            formItemIndex: 0,
-            fieldName: 'wd',
+            defaultChecked: false,
+            formItemIndex: 10,
+            fieldName: 'vxc',
           },
           style: {},
           isContainer: false,
@@ -140,12 +135,11 @@ export const Input = {
             trigger: 'onChange',
             valuePropName: 'value',
           },
-          engineApi: ['functorsMap'],
-          icon: 'Input',
+          icon: 'Switch',
           description: '',
           image: '',
           groupsName: '数据录入',
-          alias: 'DformInput',
+          isInlineBlock: true,
           setEvents: [],
           isLabelDropBoxChild: false,
           components: [],

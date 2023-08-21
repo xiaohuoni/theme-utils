@@ -1,5 +1,5 @@
-export const Input = {
-  type: 'Input',
+export const RangePicker = {
+  type: 'RangePicker',
   variable: {
     labelTextColor: {
       type: 'color',
@@ -57,12 +57,53 @@ export const Input = {
       canEdit: false,
       extendsKey: 'Form',
     },
+    iconFontSize: {
+      type: 'px',
+      label: '时间图标尺寸',
+      groupsName: '文字',
+    },
+    iconColor: {
+      type: 'color',
+      label: '时间图标颜色',
+      groupsName: '文字',
+    },
+    lineColor: {
+      type: 'color',
+      label: '时间连接线颜色',
+      groupsName: '文字',
+    },
   },
   groupsName: '数据录入',
-  icon: 'icon-ico-comp-ipt',
-  title: '输入框',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-rangepicker',
+  title: '时间段选择',
+  defaultValue: [
+    {
+      iconFontSize: '14px',
+      iconColor: '#0085D0',
+      lineColor: '#1c242e',
+    },
+  ],
+  tpl: `.ued-datePicker-wrap .pcfactory-picker-suffix{
+      color: iconColor;
+      width: iconFontSize;
+      height: iconFontSize;
+      .anticon>svg{
+        width: iconFontSize;
+        height: iconFontSize;
+      }
+    }
+    .ued-datePicker-wrap .pcfactory-picker-clear{
+      color: iconColor;
+      width: iconFontSize;
+      height: iconFontSize;
+      .anticon>svg{
+        width: iconFontSize;
+        height: iconFontSize;
+      }
+    }
+    .ued-datePicker-wrap .pcfactory-picker-range-separator{
+      color: lineColor;
+    }`,
   components: [
     {
       id: 'Form_180373',
@@ -104,32 +145,30 @@ export const Input = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'Input_3203017',
-          label: '输入框',
-          compName: 'Input',
-          type: 'Input',
+          id: 'RangePicker_842094',
+          label: '时间段选择',
+          compName: 'RangePicker',
+          type: 'RangePicker',
           compType: 2,
           compLib: 'comm',
           props: {
-            name: '输入框',
-            basicStatus: 1,
+            name: '时间段选择',
+            timeMode: 'date',
+            separator: '~',
             size: 'default',
             labelCol: 8,
             wrapperCol: 16,
+            basicStatus: 1,
             titleTip: 'notext',
-            tipContent: '',
             tipSize: 'default',
             tipWidth: '240px',
             tipHeight: 'auto',
-            prefixIconPosition: 'before',
-            postfix: '',
-            postfixIconPosition: 'before',
             required: false,
-            placeholder: '请输入',
+            format: 'YYYY-MM-DD',
+            pickerType: 'RangePicker',
             allowClear: true,
-            dataMask: '',
-            formItemIndex: 0,
-            fieldName: 'wd',
+            formItemIndex: 12,
+            fieldName: 'vfdcx',
           },
           style: {},
           isContainer: false,
@@ -140,12 +179,10 @@ export const Input = {
             trigger: 'onChange',
             valuePropName: 'value',
           },
-          engineApi: ['functorsMap'],
-          icon: 'Input',
+          icon: 'RangePicker',
           description: '',
           image: '',
           groupsName: '数据录入',
-          alias: 'DformInput',
           setEvents: [],
           isLabelDropBoxChild: false,
           components: [],

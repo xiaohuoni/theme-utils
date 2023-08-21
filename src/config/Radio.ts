@@ -1,5 +1,5 @@
-export const Input = {
-  type: 'Input',
+export const Radio = {
+  type: 'Radio',
   variable: {
     labelTextColor: {
       type: 'color',
@@ -41,28 +41,71 @@ export const Input = {
       canEdit: false,
       extendsKey: 'Form',
     },
-    itemBorderColor: {
-      type: 'color',
-      label: '边框颜色',
-      groupsName: '边框',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
-    },
-    itemBorderRadius: {
+    radioSize: {
       type: 'px',
-      label: '边框圆角',
+      label: '图标尺寸',
+      groupsName: '文字',
+    },
+    radioBorderColor: {
+      type: 'color',
+      label: '默认边框颜色',
       groupsName: '边框',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
+    },
+    radioBgColor: {
+      type: 'color',
+      label: '默认背景颜色',
+      groupsName: '边框',
+    },
+    radioSeBorderColor: {
+      type: 'color',
+      label: '选中边框颜色',
+      groupsName: '边框',
+    },
+    radioSeBgColor: {
+      type: 'color',
+      label: '选中背景颜色',
+      groupsName: '边框',
     },
   },
   groupsName: '数据录入',
-  icon: 'icon-ico-comp-ipt',
-  title: '输入框',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-radio',
+  title: '单选组',
+  defaultValue: [
+    {
+      radioSize: '16px',
+      radioBorderColor: '#e5e5e5',
+      radioBgColor: '#fff',
+      radioSeBorderColor: '#47e',
+      radioSeBgColor: '#fff',
+    },
+  ],
+  tpl: `.pcfactory-radio-inner{
+      width: radioSize;
+      height: radioSize;
+      border-color: radioBorderColor;
+      background: radioBgColor;
+    }
+    .pcfactory-radio-checked .pcfactory-radio-inner{
+      border-color: radioSeBorderColor;
+      background: radioSeBgColor;
+    }
+    .pcfactory-radio-input:focus+.pcfactory-radio-inner, .pcfactory-radio-wrapper:hover .pcfactory-radio, .pcfactory-radio:hover .pcfactory-radio-inner {
+      border-color: radioSeBorderColor;
+  }
+  .pcfactory-form-item input[type=checkbox], .pcfactory-form-item input[type=radio]{
+    width: radioSize;
+    height: radioSize;
+  }
+  .pcfactory-radio-checked .pcfactory-radio-inner:after{
+    background: radioSeBorderColor;
+    margin-left:0px;
+    margin-top:0px;
+    top:-1%;
+    left:-3%;
+    border-radius: radioSize;
+    width: radioSize;
+    height: radioSize;
+  }`,
   components: [
     {
       id: 'Form_180373',
@@ -104,32 +147,53 @@ export const Input = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'Input_3203017',
-          label: '输入框',
-          compName: 'Input',
-          type: 'Input',
+          id: 'Radio_371201',
+          label: '单选组',
+          compName: 'Radio',
+          type: 'Radio',
           compType: 2,
           compLib: 'comm',
           props: {
-            name: '输入框',
-            basicStatus: 1,
-            size: 'default',
+            name: '单选组',
+            radioType: 'Radio',
+            optionMarginRight: 0,
             labelCol: 8,
             wrapperCol: 16,
+            basicStatus: 1,
             titleTip: 'notext',
-            tipContent: '',
             tipSize: 'default',
             tipWidth: '240px',
             tipHeight: 'auto',
-            prefixIconPosition: 'before',
-            postfix: '',
-            postfixIconPosition: 'before',
             required: false,
-            placeholder: '请输入',
-            allowClear: true,
-            dataMask: '',
-            formItemIndex: 0,
-            fieldName: 'wd',
+            formItemIndex: 3,
+            fieldName: 'dsgc',
+            staticData: {
+              data: [
+                {
+                  id: '363107',
+                  label: '属性名',
+                  value: 'zx',
+                },
+                {
+                  id: '3028122',
+                  label: '属性名11',
+                  value: 'asds',
+                },
+              ],
+              type: 'custom',
+            },
+            options: [
+              {
+                id: '363107',
+                label: '属性名',
+                value: 'zx',
+              },
+              {
+                id: '3028122',
+                label: '属性名11',
+                value: 'asds',
+              },
+            ],
           },
           style: {},
           isContainer: false,
@@ -140,12 +204,11 @@ export const Input = {
             trigger: 'onChange',
             valuePropName: 'value',
           },
-          engineApi: ['functorsMap'],
-          icon: 'Input',
+          icon: 'Radio',
           description: '',
           image: '',
           groupsName: '数据录入',
-          alias: 'DformInput',
+          isInlineBlock: true,
           setEvents: [],
           isLabelDropBoxChild: false,
           components: [],

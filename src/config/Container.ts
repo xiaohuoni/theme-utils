@@ -46,7 +46,7 @@ export const Container = {
     // },
   },
   groupsName: '容器',
-  icon: 'Container',
+  icon: 'icon-ico-comp-wrap',
   desc: '配置对卡片标题、折叠面板标题、表格头部标题生效',
   // desc: '边框配置对布局容器、表单容器、普通容器、卡片、折叠面板、标签页和表格均生效；文字配置对卡片标题、折叠面板标题、表格头部标题生效',
   title: '容器',

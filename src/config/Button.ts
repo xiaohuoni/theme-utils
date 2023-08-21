@@ -15,7 +15,7 @@ export const Button = {
     marginValue: { type: 'marginInput', label: '外边距', groupsName: '布局' },
   },
   groupsName: '通用',
-  icon: 'Button',
+  icon: 'icon-ico-comp-btn',
   title: '按钮',
   defaultValue: [
     {

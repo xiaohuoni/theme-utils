@@ -1,5 +1,5 @@
-export const Input = {
-  type: 'Input',
+export const TreeSelect = {
+  type: 'TreeSelect',
   variable: {
     labelTextColor: {
       type: 'color',
@@ -57,12 +57,44 @@ export const Input = {
       canEdit: false,
       extendsKey: 'Form',
     },
+    iconFontSize: {
+      type: 'px',
+      label: '下拉图标尺寸',
+      groupsName: '文字',
+    },
+    iconColor: {
+      type: 'color',
+      label: '下拉图标颜色',
+      groupsName: '文字',
+    },
   },
   groupsName: '数据录入',
-  icon: 'icon-ico-comp-ipt',
-  title: '输入框',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-treeSelect',
+  title: '树选择',
+  defaultValue: [
+    {
+      iconFontSize: '12px',
+      iconColor: 'rgba(28,36,46,.25)',
+    },
+  ],
+  tpl: `.ued-treeSelect-wrap .pcfactory-select-arrow{
+      color: iconColor;
+      width: iconFontSize;
+      height: iconFontSize;
+      .anticon>svg{
+        width: iconFontSize;
+        height: iconFontSize;
+      }
+    }
+    .ued-treeSelect-wrap .pcfactory-select-clear{
+      color: iconColor;
+      width: iconFontSize;
+      height: iconFontSize;
+      .anticon>svg{
+        width: iconFontSize;
+        height: iconFontSize;
+      }
+    }`,
   components: [
     {
       id: 'Form_180373',
@@ -104,32 +136,75 @@ export const Input = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'Input_3203017',
-          label: '输入框',
-          compName: 'Input',
-          type: 'Input',
+          id: 'TreeSelect_357899',
+          label: '树选择',
+          compName: 'TreeSelect',
+          type: 'TreeSelect',
           compType: 2,
           compLib: 'comm',
           props: {
-            name: '输入框',
+            name: '树选择',
+            filter: 'local',
             basicStatus: 1,
-            size: 'default',
-            labelCol: 8,
-            wrapperCol: 16,
             titleTip: 'notext',
-            tipContent: '',
             tipSize: 'default',
             tipWidth: '240px',
             tipHeight: 'auto',
-            prefixIconPosition: 'before',
-            postfix: '',
-            postfixIconPosition: 'before',
-            required: false,
-            placeholder: '请输入',
+            selfSpan: '',
+            labelCol: 8,
+            wrapperCol: 16,
+            treeDefaultExpandAll: true,
+            size: 'default',
+            showSearch: false,
+            treeNodeFilterProp: 'title',
+            treeData: [
+              {
+                title: '标题1',
+                key: '982968',
+                $$isParent: true,
+                selectable: true,
+                children: [
+                  {
+                    title: '副标题1',
+                    key: '223275',
+                    selectable: true,
+                    children: [],
+                    value: '223275',
+                  },
+                  {
+                    title: '副标题2',
+                    key: '6154336',
+                    selectable: true,
+                    value: '6154336',
+                  },
+                ],
+                value: '982968',
+              },
+              {
+                title: '标题2',
+                key: '589191',
+                $$isParent: true,
+                selectable: true,
+                children: [
+                  {
+                    title: '副标题21',
+                    key: '974854',
+                    selectable: true,
+                    value: '974854',
+                  },
+                  {
+                    title: '副标题22',
+                    key: '555559',
+                    selectable: true,
+                    value: '555559',
+                  },
+                ],
+                value: '589191',
+              },
+            ],
             allowClear: true,
-            dataMask: '',
             formItemIndex: 0,
-            fieldName: 'wd',
+            fieldName: '32',
           },
           style: {},
           isContainer: false,
@@ -140,12 +215,11 @@ export const Input = {
             trigger: 'onChange',
             valuePropName: 'value',
           },
-          engineApi: ['functorsMap'],
-          icon: 'Input',
+          engineApi: ['service.commonFetch'],
+          icon: 'TreeSelect',
           description: '',
           image: '',
           groupsName: '数据录入',
-          alias: 'DformInput',
           setEvents: [],
           isLabelDropBoxChild: false,
           components: [],

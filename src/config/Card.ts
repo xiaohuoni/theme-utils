@@ -74,7 +74,7 @@ export const Card = {
     },
   },
   groupsName: '容器',
-  icon: 'Card',
+  icon: 'icon-ico-comp-card',
   title: '卡片',
   defaultValue: [
     {

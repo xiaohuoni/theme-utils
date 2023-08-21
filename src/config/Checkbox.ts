@@ -1,5 +1,5 @@
-export const Input = {
-  type: 'Input',
+export const Checkbox = {
+  type: 'Checkbox',
   variable: {
     labelTextColor: {
       type: 'color',
@@ -41,28 +41,70 @@ export const Input = {
       canEdit: false,
       extendsKey: 'Form',
     },
-    itemBorderColor: {
-      type: 'color',
-      label: '边框颜色',
-      groupsName: '边框',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
-    },
-    itemBorderRadius: {
+    radioSize: {
       type: 'px',
-      label: '边框圆角',
+      label: '图标尺寸',
+      groupsName: '文字',
+    },
+    radioBorderColor: {
+      type: 'color',
+      label: '默认边框颜色',
       groupsName: '边框',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'Form',
+    },
+    radioBgColor: {
+      type: 'color',
+      label: '默认背景颜色',
+      groupsName: '边框',
+    },
+    radioSeBorderColor: {
+      type: 'color',
+      label: '选中边框颜色',
+      groupsName: '边框',
+    },
+    radioSeBgColor: {
+      type: 'color',
+      label: '选中背景颜色',
+      groupsName: '边框',
     },
   },
   groupsName: '数据录入',
-  icon: 'icon-ico-comp-ipt',
-  title: '输入框',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-checkbox',
+  title: '复选框',
+  defaultValue: [
+    {
+      radioSize: '16px',
+      radioBorderColor: '#e5e5e5',
+      radioBgColor: '#fff',
+      radioSeBorderColor: '#47e',
+      radioSeBgColor: '#47e',
+    },
+  ],
+  tpl: `.pcfactory-checkbox-inner{
+      width: radioSize;
+      height: radioSize;
+      border-color: radioBorderColor;
+      background: radioBgColor;
+    }
+    .pcfactory-checkbox-checked .pcfactory-checkbox-inner{
+      border-color: radioSeBorderColor;
+      background: radioSeBgColor;
+    }
+    .pcfactory-checkbox-input:focus+.pcfactory-checkbox-inner, .pcfactory-checkbox-wrapper:hover .pcfactory-checkbox, .pcfactory-checkbox:hover .pcfactory-checkbox-inner {
+      border-color: radioSeBorderColor;
+  }
+  .pcfactory-form-item input[type=checkbox], .pcfactory-form-item input[type=radio]{
+    width: radioSize;
+    height: radioSize;
+  }
+  .pcfactory-checkbox-indeterminate .pcfactory-checkbox-inner:after{
+    background: radioSeBgColor;
+    width: calc(0.47* radioSize);
+    height: calc(0.47* radioSize);
+  }
+  .pcfactory-checkbox-checked .pcfactory-checkbox-inner:after{
+    width: calc(0.35* radioSize);
+    height: calc(0.57* radioSize);
+  }`,
   components: [
     {
       id: 'Form_180373',
@@ -104,32 +146,31 @@ export const Input = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'Input_3203017',
-          label: '输入框',
-          compName: 'Input',
-          type: 'Input',
+          id: 'Checkbox_7458648',
+          label: '复选框',
+          compName: 'Checkbox',
+          type: 'Checkbox',
           compType: 2,
           compLib: 'comm',
           props: {
-            name: '输入框',
+            name: '复选框',
             basicStatus: 1,
-            size: 'default',
-            labelCol: 8,
-            wrapperCol: 16,
             titleTip: 'notext',
-            tipContent: '',
             tipSize: 'default',
             tipWidth: '240px',
             tipHeight: 'auto',
-            prefixIconPosition: 'before',
-            postfix: '',
-            postfixIconPosition: 'before',
-            required: false,
-            placeholder: '请输入',
-            allowClear: true,
-            dataMask: '',
-            formItemIndex: 0,
-            fieldName: 'wd',
+            text: '',
+            selfSpan: '',
+            labelCol: 8,
+            wrapperCol: 16,
+            formItemIndex: 5,
+            fieldName: 'ads',
+            extendProps: [
+              {
+                key: 'ere',
+                value: 'fefds',
+              },
+            ],
           },
           style: {},
           isContainer: false,
@@ -138,14 +179,13 @@ export const Input = {
           platform: 'pc',
           fieldProps: {
             trigger: 'onChange',
-            valuePropName: 'value',
+            valuePropName: 'checked',
           },
-          engineApi: ['functorsMap'],
-          icon: 'Input',
+          icon: 'Checkbox',
           description: '',
           image: '',
           groupsName: '数据录入',
-          alias: 'DformInput',
+          isInlineBlock: true,
           setEvents: [],
           isLabelDropBoxChild: false,
           components: [],

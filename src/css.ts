@@ -9,7 +9,7 @@ export function stringifyCss(tpl: string, values: any) {
     const regex = new RegExp(`${key}\\b`, 'g');
     result = result.replace(regex, value);
   }
-
+  console.log('stringifyCss', result);
   return result;
 }
 

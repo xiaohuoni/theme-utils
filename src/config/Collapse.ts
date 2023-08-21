@@ -75,7 +75,7 @@ export const Collapse = {
     },
   },
   groupsName: '容器',
-  icon: 'Collapse',
+  icon: 'icon-ico-comp-collapse',
   title: '折叠面板',
   defaultValue: [
     {

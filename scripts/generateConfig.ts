@@ -10,6 +10,7 @@ const configPath = join(
   !!isMobile ? 'h5config' : 'config',
 );
 const outPut = join(configPath, `${type}.ts`);
+
 fs.access(outPut, fs.constants.F_OK, (err) => {
   if (err) {
     const tpl = `export const ${type} = {
@@ -18,7 +19,7 @@ fs.access(outPut, fs.constants.F_OK, (err) => {
       fontSize: { type: 'px', label: '尺寸', groupsName: '文字' },
     },
     groupsName: '${groupName}',
-    icon: '${type}',
+    icon: 'icon-ico-comp-${type.toLowerCase()}',
     title: '${title || type}',
     defaultValue: [
       {

@@ -7,7 +7,7 @@ export const Link = {
     fontSize: { type: 'px', label: '文本尺寸', groupsName: '文字' },
   },
   groupsName: '通用',
-  icon: 'Link',
+  icon: 'icon-ico-comp-link',
   title: '超链接',
   defaultValue: [
     {

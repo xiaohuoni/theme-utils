@@ -4,7 +4,7 @@ export const Icon = {
     iconSize: { type: 'px', label: '尺寸', groupsName: '文字' },
   },
   groupsName: '通用',
-  icon: 'Icon',
+  icon: 'icon-ico-comp-icon',
   title: '图标',
   defaultValue: [
     {

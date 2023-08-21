@@ -1,5 +1,5 @@
-export const Input = {
-  type: 'Input',
+export const TimePicker = {
+  type: 'TimePicker',
   variable: {
     labelTextColor: {
       type: 'color',
@@ -57,12 +57,44 @@ export const Input = {
       canEdit: false,
       extendsKey: 'Form',
     },
+    iconFontSize: {
+      type: 'px',
+      label: '日期图标尺寸',
+      groupsName: '文字',
+    },
+    iconColor: {
+      type: 'color',
+      label: '日期图标颜色',
+      groupsName: '文字',
+    },
   },
   groupsName: '数据录入',
-  icon: 'icon-ico-comp-ipt',
-  title: '输入框',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-timepicker',
+  title: '时间选择',
+  defaultValue: [
+    {
+      iconFontSize: '14px',
+      iconColor: '#0085D0',
+    },
+  ],
+  tpl: `.ued-datePicker-wrap .pcfactory-picker-suffix{
+      color: iconColor;
+      width: iconFontSize;
+      height: iconFontSize;
+      .anticon>svg{
+        width: iconFontSize;
+        height: iconFontSize;
+      }
+    }
+    .ued-datePicker-wrap .pcfactory-picker-clear{
+      color: iconColor;
+      width: iconFontSize;
+      height: iconFontSize;
+      .anticon>svg{
+        width: iconFontSize;
+        height: iconFontSize;
+      }
+    }`,
   components: [
     {
       id: 'Form_180373',
@@ -104,32 +136,35 @@ export const Input = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'Input_3203017',
-          label: '输入框',
-          compName: 'Input',
-          type: 'Input',
+          id: 'TimePicker_274966',
+          label: '时间选择',
+          compName: 'TimePicker',
+          type: 'TimePicker',
           compType: 2,
           compLib: 'comm',
           props: {
-            name: '输入框',
+            name: '时间选择',
             basicStatus: 1,
             size: 'default',
+            selfSpan: '',
             labelCol: 8,
             wrapperCol: 16,
             titleTip: 'notext',
-            tipContent: '',
             tipSize: 'default',
             tipWidth: '240px',
             tipHeight: 'auto',
-            prefixIconPosition: 'before',
-            postfix: '',
-            postfixIconPosition: 'before',
             required: false,
-            placeholder: '请输入',
+            limitRange: 'no',
+            startTime: '',
+            endTime: '',
+            format: 'YYYY-MM-DD HH:mm:ss',
+            timeMode: 'time',
+            pickerType: 'TimePicker',
+            placeholder: '请选择时间',
+            customTip: '',
             allowClear: true,
-            dataMask: '',
-            formItemIndex: 0,
-            fieldName: 'wd',
+            formItemIndex: 14,
+            fieldName: 'rdsx',
           },
           style: {},
           isContainer: false,
@@ -140,12 +175,10 @@ export const Input = {
             trigger: 'onChange',
             valuePropName: 'value',
           },
-          engineApi: ['functorsMap'],
-          icon: 'Input',
+          icon: 'TimePicker',
           description: '',
           image: '',
           groupsName: '数据录入',
-          alias: 'DformInput',
           setEvents: [],
           isLabelDropBoxChild: false,
           components: [],

@@ -1,5 +1,5 @@
-export const Input = {
-  type: 'Input',
+export const Select = {
+  type: 'Select',
   variable: {
     labelTextColor: {
       type: 'color',
@@ -57,12 +57,44 @@ export const Input = {
       canEdit: false,
       extendsKey: 'Form',
     },
+    iconFontSize: {
+      type: 'px',
+      label: '下拉图标尺寸',
+      groupsName: '文字',
+    },
+    iconColor: {
+      type: 'color',
+      label: '下拉图标颜色',
+      groupsName: '文字',
+    },
   },
   groupsName: '数据录入',
-  icon: 'icon-ico-comp-ipt',
-  title: '输入框',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-select',
+  title: '下拉单选',
+  defaultValue: [
+    {
+      iconFontSize: '12px',
+      iconColor: 'rgba(28,36,46,.25)',
+    },
+  ],
+  tpl: `.ued-select-wrap .pcfactory-select-arrow{
+    color: iconColor;
+    width: iconFontSize;
+    height: iconFontSize;
+    .anticon>svg{
+      width: iconFontSize;
+      height: iconFontSize;
+    }
+  }
+  .ued-select-wrap .pcfactory-select-clear{
+    color: iconColor;
+    width: iconFontSize;
+    height: iconFontSize;
+    .anticon>svg{
+      width: iconFontSize;
+      height: iconFontSize;
+    }
+  }`,
   components: [
     {
       id: 'Form_180373',
@@ -104,32 +136,57 @@ export const Input = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'Input_3203017',
-          label: '输入框',
-          compName: 'Input',
-          type: 'Input',
+          id: 'Select_956117',
+          label: '下拉框',
+          compName: 'Select',
+          type: 'Select',
           compType: 2,
           compLib: 'comm',
           props: {
-            name: '输入框',
+            name: '下拉框',
             basicStatus: 1,
             size: 'default',
             labelCol: 8,
             wrapperCol: 16,
             titleTip: 'notext',
-            tipContent: '',
             tipSize: 'default',
             tipWidth: '240px',
             tipHeight: 'auto',
-            prefixIconPosition: 'before',
-            postfix: '',
-            postfixIconPosition: 'before',
             required: false,
-            placeholder: '请输入',
+            filter: 'none',
+            classification: 'default',
+            placeholder: '请选择',
             allowClear: true,
-            dataMask: '',
             formItemIndex: 0,
-            fieldName: 'wd',
+            fieldName: 'dsgt',
+            defaultValue: '1',
+            staticData: {
+              data: [
+                {
+                  id: '022656',
+                  label: '属性名',
+                  value: '1',
+                },
+                {
+                  id: '18066',
+                  label: '属性名1',
+                  value: '2',
+                },
+              ],
+              type: 'custom',
+            },
+            options: [
+              {
+                id: '022656',
+                label: '属性名',
+                value: '1',
+              },
+              {
+                id: '18066',
+                label: '属性名1',
+                value: '2',
+              },
+            ],
           },
           style: {},
           isContainer: false,
@@ -140,12 +197,11 @@ export const Input = {
             trigger: 'onChange',
             valuePropName: 'value',
           },
-          engineApi: ['functorsMap'],
-          icon: 'Input',
+          icon: 'Select',
           description: '',
           image: '',
           groupsName: '数据录入',
-          alias: 'DformInput',
+          engineApi: ['sandBoxSafeRun'],
           setEvents: [],
           isLabelDropBoxChild: false,
           components: [],
