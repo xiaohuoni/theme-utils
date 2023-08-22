@@ -1,9 +1,14 @@
 import { stringifyCss, parseCss } from './css';
 import { objToListByGroupsName } from './utils';
 import { Button } from './h5config/Button';
+import { Table } from './h5config/Table';
+import { FilterItems } from './h5config/FilterItems';
 
 export const MOBILE_ASSETS_CSS_TPL: any = {
-  Button,
+  // TODO: 按钮 style 写死，最后修改方案
+  // Button,
+  Table,
+  FilterItems,
 };
 
 const extend: any = {};
@@ -76,10 +81,8 @@ export function stringifyMobileCssByTypePreview(type: string, values: any) {
     const cfg = getMobileItemByType(extend[type]);
     const item = getMobileItemByType(type);
     return (
-      stringifyCss(
-        cfg.tpl,
-        px2rem({ ...cfg.defaultValue[0], ...values }),
-      ) + stringifyCss(item.tpl, px2rem(values))
+      stringifyCss(cfg.tpl, px2rem({ ...cfg.defaultValue[0], ...values })) +
+      stringifyCss(item.tpl, px2rem(values))
     );
   } else {
     const item = getMobileItemByType(type);
