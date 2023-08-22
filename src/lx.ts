@@ -26,6 +26,10 @@ import { TreeSelect } from './config/TreeSelect';
 import { Cascader } from './config/Cascader';
 import { Switch } from './config/Switch';
 import { StdUpload } from './config/StdUpload';
+import { Table } from './config/Table';
+import { Tag } from './config/Tag';
+import { Tree } from './config/Tree';
+import { Description } from './config/Description';
 
 export const ASSETS_CSS_TPL: any = {
   Button,
@@ -51,23 +55,11 @@ export const ASSETS_CSS_TPL: any = {
   Cascader,
   Switch,
   StdUpload,
+  Table,
+  Tag,
+  Tree,
+  Description,
 };
-
-export const ASSETS_COMPONENT_LIST = objToListByGroupsName(
-  Object.values(ASSETS_CSS_TPL),
-);
-
-export function getItemByType(type: string) {
-  const com = ASSETS_CSS_TPL[type];
-  if (!type || !com) return { tpl: '' };
-  return com;
-}
-
-export function stringifyCssByType(type: string, values: any) {
-  const item = getItemByType(type);
-  return stringifyCss(item.tpl, values);
-}
-
 const extend: any = {
   Input: 'Form',
   TextArea: 'Form',
@@ -84,7 +76,22 @@ const extend: any = {
   Cascader: 'Form',
   Switch: 'Form',
   StdUpload: 'Form',
+  Table: 'Container',
 };
+export const ASSETS_COMPONENT_LIST = objToListByGroupsName(
+  Object.values(ASSETS_CSS_TPL),
+);
+
+export function getItemByType(type: string) {
+  const com = ASSETS_CSS_TPL[type];
+  if (!type || !com) return { tpl: '' };
+  return com;
+}
+
+export function stringifyCssByType(type: string, values: any) {
+  const item = getItemByType(type);
+  return stringifyCss(item.tpl, values);
+}
 
 // 临时解决方案，将只对它有影响的值，生成继承的样式
 export function stringifyCssByTypePreview(type: string, values: any) {

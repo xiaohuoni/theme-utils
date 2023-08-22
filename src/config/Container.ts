@@ -74,12 +74,18 @@ export const Container = {
       font-size: fontSize;
       font-weight: fontWeight;
     }
-    .ued-table-filters .table-head-default, .ued-table-filters .table-head-middle, .ued-table-wrap .table-head-default, .ued-table-wrap .table-head-middle .title{
+   .ued-table-filters .table-head-default, .ued-table-filters .table-head-middle, .ued-table-wrap .table-head-default, .ued-table-wrap .table-head-middle .title{
       color: textColor;
       line-height: lineHeight;
       font-size: fontSize;
       font-weight: fontWeight;
       padding: 12px 0 0 20px;
+    }
+    .ued-table-wrap .table-head .title{
+      color: textColor;
+      line-height: lineHeight;
+      font-size: fontSize;
+      font-weight: fontWeight;
     }`,
   components: [
     {
