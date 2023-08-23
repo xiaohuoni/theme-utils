@@ -3,12 +3,25 @@ import { objToListByGroupsName } from './utils';
 import { Button } from './h5config/Button';
 import { Table } from './h5config/Table';
 import { FilterItems } from './h5config/FilterItems';
+import { NoticeBarPlus } from './h5config/NoticeBarPlus';
+import { StaticTabs } from './h5config/StaticTabs';
+import { Grid } from './h5config/Grid';
+import { SearchView } from './h5config/SearchView';
+import { LoadMore } from './h5config/LoadMore';
+import { DForm } from './h5config/DForm';
 
 export const MOBILE_ASSETS_CSS_TPL: any = {
   // TODO: 按钮 style 写死，最后修改方案
   // Button,
   Table,
   FilterItems,
+  NoticeBarPlus,
+  StaticTabs,
+  Grid,
+  SearchView,
+  // TODO: 动态列表自己并没有样式才对
+  // LoadMore,
+  DForm,
 };
 
 const extend: any = {};
@@ -28,13 +41,12 @@ export function px2rem(obj: any) {
   for (const key in obj) {
     if (obj.hasOwnProperty(key)) {
       let value = obj[key];
-
-      // 处理 margin 和 padding 的值
-      if (key === 'margin' || key === 'padding') {
-        const values = value.split(' ');
+      const values = value.split(' ');
+      if (values.length > 0) {
         const remValues = values.map((val: string) => {
           if (val.includes('px')) {
             const parsedValue = parseFloat(val);
+            console.log('px2rem', parsedValue);
             return parsedValue / 50 + 'rem';
           }
           return val;
