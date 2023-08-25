@@ -84,6 +84,18 @@ export const DForm = {
       ],
       desc: '对所有[表单]类型组件生效',
     },
+    iconColor: {
+      type: 'color',
+      label: '后缀图标颜色',
+      groupsName: '图标',
+      desc: '对所有[选项类][表单]类型组件生效',
+    },
+    iconSize: {
+      type: 'px',
+      label: '后缀图标尺寸',
+      groupsName: '图标',
+      desc: '对所有[选项类][表单]类型组件生效',
+    },
     // itemBorderColor: {
     //   type: 'color',
     //   label: '组件边框颜色',
@@ -96,11 +108,17 @@ export const DForm = {
     //   groupsName: '组件',
     //   desc: '对所有[表单]类型组件生效',
     // },
-    paddingValue: { type: 'marginInput', label: '内边距', groupsName: '组件' },
+    paddingValue: {
+      type: 'marginInput',
+      label: '内边距',
+      groupsName: '组件',
+      desc: '对所有[表单]类型组件生效',
+    },
     headTextAlign: {
       type: 'select',
       label: '文字对齐方式',
       groupsName: '组件',
+      desc: '对所有[表单]类型组件生效',
       options: [
         { title: 'left', value: 'left' },
         { title: 'center', value: 'center' },
@@ -124,6 +142,8 @@ export const DForm = {
       fontWeight: '400',
       paddingValue: '0',
       headTextAlign: 'right',
+      iconColor: 'rgba(0, 0, 0, 0.45)',
+      iconSize: '16px',
     },
   ],
   tpl: `
@@ -200,6 +220,12 @@ export const DForm = {
     color: textColor;
     text-align: headTextAlign;
 
+}
+.cust-icon svg{
+  color: iconColor;
+  fill: iconColor;
+  width: iconSize;
+  height: iconSize;
 }`,
   components: [
     {

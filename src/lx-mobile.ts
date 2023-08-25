@@ -9,6 +9,13 @@ import { Grid } from './h5config/Grid';
 import { SearchView } from './h5config/SearchView';
 import { LoadMore } from './h5config/LoadMore';
 import { DForm } from './h5config/DForm';
+import { DformInput } from './h5config/DformInput';
+import { DformTextArea } from './h5config/DformTextArea';
+import { DformInputNumber } from './h5config/DformInputNumber';
+import { DformRadio } from './h5config/DformRadio';
+import { DCheckbox } from './h5config/DCheckbox';
+import { DformPicker } from './h5config/DformPicker';
+import { DMultiplePicker } from './h5config/DMultiplePicker';
 
 export const MOBILE_ASSETS_CSS_TPL: any = {
   // TODO: 按钮 style 写死，最后修改方案
@@ -22,9 +29,24 @@ export const MOBILE_ASSETS_CSS_TPL: any = {
   // TODO: 动态列表自己并没有样式才对
   // LoadMore,
   DForm,
+  DformInput,
+  DformTextArea,
+  DformInputNumber,
+  DformRadio,
+  DCheckbox,
+  DformPicker,
+  DMultiplePicker,
 };
 
-const extend: any = {};
+const extend: any = {
+  DformInput: 'DForm',
+  DformTextArea: 'DForm',
+  DformInputNumber: 'DForm',
+  DformRadio: 'DForm',
+  DCheckbox: 'DForm',
+  DformPicker: 'DForm',
+  DMultiplePicker: 'DForm',
+};
 export const MOBILE_ASSETS_COMPONENT_LIST = objToListByGroupsName(
   Object.values(MOBILE_ASSETS_CSS_TPL),
 );
