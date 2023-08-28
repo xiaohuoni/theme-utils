@@ -1,5 +1,5 @@
-export const DMultiplePicker = {
-  type: 'DMultiplePicker',
+export const DAddressPicker = {
+  type: 'DAddressPicker',
   variable: {
     iconColor: {
       type: 'color',
@@ -118,8 +118,8 @@ export const DMultiplePicker = {
     },
   },
   groupsName: '表单',
-  icon: 'icon-ico-comp-app-DMultiplePicker',
-  title: '多项选择',
+  icon: 'icon-ico-comp-app-DAddressPicker',
+  title: '地址',
   defaultValue: [{}],
   tpl: ``,
   components: [
@@ -154,40 +154,32 @@ export const DMultiplePicker = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'DMultiplePicker_919181',
-          label: '多项选择',
-          compName: 'DMultiplePicker',
-          type: 'DMultiplePicker',
+          id: 'DAddressPicker_941501',
+          label: '地址',
+          compName: 'DAddressPicker',
+          type: 'DAddressPicker',
           compType: 2,
           compLib: '@/components',
           props: {
-            name: '多项选择',
-            valueType: 'ellipsis',
+            name: '地址选择',
+            placeholder: '请选择',
+            status: '1',
+            positionType: 'horizontal',
             titleIcon: 'none',
             postfix: '',
             postfixIconPosition: 'before',
-            title: '多项选择',
-            dformType: 'DMultiplePicker',
-            positionType: 'horizontal',
-            status: '1',
-            options: [
-              {
-                label: '选项1',
-                value: 'options1',
-                id: 'options1',
-              },
-              {
-                label: '选项2',
-                value: 'options2',
-                id: 'options2',
-              },
-            ],
+            title: '地址选择',
+            dformType: 'DAddressPicker',
+            placeholderList: ['请选择省', '请选择市', '请选择区'],
+            alias: {
+              label: 'title',
+            },
             icon: {
               isIconFont: false,
               theme: 'outlined',
               type: 'right',
             },
-            fieldProps: 'fecss',
+            fieldProps: 'dassf',
           },
           style: {},
           isContainer: false,
@@ -198,7 +190,11 @@ export const DMultiplePicker = {
             trigger: 'onChange',
             valuePropName: 'defaultValue',
           },
-          engineApi: ['downloadFileByFileCode', 'getMaterialFile'],
+          engineApi: [
+            'downloadFileByFileCode',
+            'getMaterialFile',
+            'service.commonFetch',
+          ],
           setEvents: [],
           description: '',
           image: '',

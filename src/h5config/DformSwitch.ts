@@ -1,21 +1,15 @@
-export const DMultiplePicker = {
-  type: 'DMultiplePicker',
+export const DformSwitch = {
+  type: 'DformSwitch',
   variable: {
-    iconColor: {
+    openColor: {
       type: 'color',
-      label: '后缀图标颜色',
-      groupsName: '图标',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'DForm',
+      label: '开启颜色',
+      groupsName: '文字',
     },
-    iconSize: {
-      type: 'px',
-      label: '后缀图标尺寸',
-      groupsName: '图标',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'DForm',
+    closeColor: {
+      type: 'color',
+      label: '关闭颜色',
+      groupsName: '文字',
     },
     labelTextColor: {
       type: 'color',
@@ -56,45 +50,6 @@ export const DMultiplePicker = {
       canEdit: false,
       extendsKey: 'DForm',
     },
-    textColor: {
-      type: 'color',
-      label: '文本颜色',
-      groupsName: '组件',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'DForm',
-    },
-    fontSize: {
-      type: 'px',
-      label: '文本尺寸',
-      groupsName: '组件',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'DForm',
-    },
-    lineHeight: {
-      type: 'px',
-      label: '文本行高',
-      groupsName: '组件',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'DForm',
-    },
-    fontWeight: {
-      type: 'select',
-      label: '文本字重',
-      groupsName: '组件',
-      options: [
-        { title: '100', value: '100' },
-        { title: '200', value: '200' },
-        { title: '300', value: '300' },
-        { title: '400', value: '400' },
-        { title: '500', value: '500' },
-      ],
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'DForm',
-    },
     paddingValue: {
       type: 'marginInput',
       label: '内边距',
@@ -103,25 +58,26 @@ export const DMultiplePicker = {
       canEdit: false,
       extendsKey: 'DForm',
     },
-    headTextAlign: {
-      type: 'select',
-      label: '文字对齐方式',
-      groupsName: '组件',
-      desc: '继承自表单，此处不可编辑',
-      canEdit: false,
-      extendsKey: 'DForm',
-      options: [
-        { title: 'left', value: 'left' },
-        { title: 'center', value: 'center' },
-        { title: 'right', value: 'right' },
-      ],
-    },
   },
   groupsName: '表单',
-  icon: 'icon-ico-comp-app-DMultiplePicker',
-  title: '多项选择',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-app-DformSwitch',
+  title: '滑动开关',
+  defaultValue: [
+    {
+      openColor: '#108ee9',
+      closeColor: '#ddd',
+    },
+  ],
+  tpl: `
+    .adm-switch.adm-switch-checked .adm-switch-checkbox{
+      background: openColor;
+    }
+    .lingxiteam-dform-switch .adm-switch-checkbox{
+      background: closeColor;
+    }
+    .lingxiteam-dform-switch .adm-switch-checkbox::before{
+      background: closeColor;
+    }`,
   components: [
     {
       id: 'DForm_333712',
@@ -154,40 +110,33 @@ export const DMultiplePicker = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'DMultiplePicker_919181',
-          label: '多项选择',
-          compName: 'DMultiplePicker',
-          type: 'DMultiplePicker',
+          id: 'DformSwitch_782373',
+          label: '滑动开关',
+          compName: 'DformSwitch',
+          type: 'DformSwitch',
           compType: 2,
           compLib: '@/components',
           props: {
-            name: '多项选择',
-            valueType: 'ellipsis',
-            titleIcon: 'none',
-            postfix: '',
-            postfixIconPosition: 'before',
-            title: '多项选择',
-            dformType: 'DMultiplePicker',
-            positionType: 'horizontal',
-            status: '1',
-            options: [
-              {
-                label: '选项1',
-                value: 'options1',
-                id: 'options1',
-              },
-              {
-                label: '选项2',
-                value: 'options2',
-                id: 'options2',
-              },
-            ],
-            icon: {
+            name: '开关',
+            openText: '开启',
+            closeText: '关闭',
+            openIcon: {
               isIconFont: false,
               theme: 'outlined',
-              type: 'right',
+              type: 'check',
             },
-            fieldProps: 'fecss',
+            closeIcon: {
+              isIconFont: false,
+              theme: 'outlined',
+              type: 'close',
+            },
+            dformType: 'DformSwitch',
+            title: '开关',
+            placeholder: '请选择',
+            defaultValue: false,
+            status: '1',
+            switchType: 'normal',
+            fieldProps: 'qweds',
           },
           style: {},
           isContainer: false,

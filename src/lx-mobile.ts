@@ -16,10 +16,26 @@ import { DformRadio } from './h5config/DformRadio';
 import { DCheckbox } from './h5config/DCheckbox';
 import { DformPicker } from './h5config/DformPicker';
 import { DMultiplePicker } from './h5config/DMultiplePicker';
+import { DformSelect } from './h5config/DformSelect';
+import { DAddressPicker } from './h5config/DAddressPicker';
+import { DformDate } from './h5config/DformDate';
+import { DformRangePicker } from './h5config/DformRangePicker';
+import { DformSwitch } from './h5config/DformSwitch';
+import { DformImagePicker } from './h5config/DformImagePicker';
+import { DformFile } from './h5config/DformFile';
+import { Icon } from './h5config/Icon';
+import { ALink } from './h5config/Link';
+import { Divider } from './h5config/Divider';
+import { Card } from './h5config/Card';
+import { Accordion } from './h5config/Accordion';
 
 export const MOBILE_ASSETS_CSS_TPL: any = {
-  // TODO: 按钮 style 写死，最后修改方案
+  Icon,
+  ALink,
+  // TODO: 按钮，分割线 style 写死，最后修改方案
   // Button,
+  // Divider,
+  Card,
   Table,
   FilterItems,
   NoticeBarPlus,
@@ -36,6 +52,14 @@ export const MOBILE_ASSETS_CSS_TPL: any = {
   DCheckbox,
   DformPicker,
   DMultiplePicker,
+  DformSelect,
+  DAddressPicker,
+  DformDate,
+  DformRangePicker,
+  DformSwitch,
+  DformImagePicker,
+  DformFile,
+  Accordion,
 };
 
 const extend: any = {
@@ -46,6 +70,13 @@ const extend: any = {
   DCheckbox: 'DForm',
   DformPicker: 'DForm',
   DMultiplePicker: 'DForm',
+  DformSelect: 'DForm',
+  DAddressPicker: 'DForm',
+  DformDate: 'DForm',
+  DformRangePicker: 'DForm',
+  DformSwitch: 'DForm',
+  DformImagePicker: 'DForm',
+  DformFile: 'DForm',
 };
 export const MOBILE_ASSETS_COMPONENT_LIST = objToListByGroupsName(
   Object.values(MOBILE_ASSETS_CSS_TPL),
@@ -68,7 +99,6 @@ export function px2rem(obj: any) {
         const remValues = values.map((val: string) => {
           if (val.includes('px')) {
             const parsedValue = parseFloat(val);
-            console.log('px2rem', parsedValue);
             return parsedValue / 50 + 'rem';
           }
           return val;
@@ -98,12 +128,9 @@ export function rem2px(rem: string) {
 }
 
 export function parseValueRem(values: any) {
-  console.log(values);
   Object.keys(values).map((key) => {
     if (values[key]?.includes('rem')) {
       values[key] = rem2px(values[key]);
-      console.log(key);
-      console.log(values[key]);
     }
   });
   return values;

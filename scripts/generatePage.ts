@@ -23,7 +23,6 @@ const { ${type} : comConfig } = indexConfig.default;
             onClick={() => {
               const css = stringifyCssByType('${type}', config.default[0]);
               const css1 = normalizeCSS(css, '#previewId');
-            console.log(css1);
             insertRules('id', css1, ref.current!);
             }}
           >

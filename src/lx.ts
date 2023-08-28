@@ -96,7 +96,6 @@ export function stringifyCssByType(type: string, values: any) {
 
 // 临时解决方案，将只对它有影响的值，生成继承的样式
 export function stringifyCssByTypePreview(type: string, values: any) {
-  console.log(values);
   if (extend[type]) {
     const cfg = getItemByType(extend[type]);
     const item = getItemByType(type);

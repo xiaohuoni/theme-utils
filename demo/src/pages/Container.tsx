@@ -45,7 +45,6 @@ function Page({}) {
         onClick={() => {
           const css = stringifyCssByType('Container', config.default[0]);
           const css1 = normalizeCSS(css, '#previewId');
-          console.log(css1);
           insertRules('id', css1, ref.current!);
         }}
       >

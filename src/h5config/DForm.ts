@@ -6,22 +6,6 @@ export const DForm = {
       label: '背景颜色',
       groupsName: '背景颜色',
     },
-    // borderColor: {
-    //   type: 'color',
-    //   label: '边框颜色',
-    //   groupsName: '边框',
-    //   canEdit: false,
-    //   extendsKey: 'Container',
-    //   desc: '继承自容器，此处不可编辑',
-    // },
-    // borderRadius: {
-    //   type: 'px',
-    //   label: '边框圆角',
-    //   groupsName: '边框',
-    //   canEdit: false,
-    //   extendsKey: 'Container',
-    //   desc: '继承自容器，此处不可编辑',
-    // },
     labelTextColor: {
       type: 'color',
       label: '标签文本颜色',
@@ -221,11 +205,39 @@ export const DForm = {
     text-align: headTextAlign;
 
 }
+.cust-icon{
+  width: iconSize;
+  height: iconSize;
+}
 .cust-icon svg{
   color: iconColor;
   fill: iconColor;
   width: iconSize;
   height: iconSize;
+}
+.lingxiteam-dform-right-content{
+  width: iconSize;
+  height: iconSize;
+  overflow: hidden;
+}
+.lingxiteam-dform-arrow-horizontal{
+  background-image: none;
+  width: iconSize;
+  height: iconSize;
+  position: relative;
+}
+.lingxiteam-dform-arrow-horizontal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: iconSize;
+  height: iconSize;
+background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2226%22%20viewBox%3D%220%200%2016%2026%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20id%3D%22UI-KIT_%E5%9F%BA%E7%A1%80%E5%85%83%E4%BB%B6%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20id%3D%229.9%E5%9F%BA%E7%A1%80%E5%85%83%E4%BB%B6%22%20transform%3D%22translate%28-5809.000000%2C%20-8482.000000%29%22%20fill%3D%22%23C7C7CC%22%3E%3Cpolygon%20id%3D%22Disclosure-Indicator%22%20points%3D%225811%208482%205809%208484%205820.5%208495%205809%208506%205811%208508%205825%208495%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+background-repeat: round;
+transform: translateX(-100%);
+background-size: 100%;
+  filter: drop-shadow(iconSize 0 iconColor);
 }`,
   components: [
     {
@@ -347,6 +359,151 @@ export const DForm = {
           isLabelDropBoxChild: false,
           components: [],
           path: ['769713', 'View_769713_1', 'DForm_458695'],
+        },
+        {
+          id: 'DformImagePicker_781976',
+          label: '上传图片',
+          compName: 'DformImagePicker',
+          type: 'DformImagePicker',
+          compType: 2,
+          compLib: '@/components',
+          props: {
+            name: '上传图片',
+            length: 4,
+            limitSize: '10MB',
+            isFilespreview: true,
+            selectable: true,
+            disableDelete: true,
+            titleIcon: 'none',
+            uploadType: 'fileType',
+            dformType: 'DformImagePicker',
+            title: '上传图片',
+            maxLength: 5,
+            status: '1',
+            capture: 'system',
+            fieldProps: 'wed',
+          },
+          style: {},
+          isContainer: false,
+          isBusiObjContainer: false,
+          cmdgroup: ['basic'],
+          platform: 'h5',
+          setEvents: [],
+          description: '',
+          image: '',
+          groupsName: '表单',
+          fieldProps: {
+            trigger: 'onChange',
+            valuePropName: 'defaultValue',
+          },
+          engineApi: [
+            'downloadByFileId',
+            'downloadFileByFileCode',
+            'downFieldPrefix',
+            'http',
+            'getMaterialFile',
+          ],
+          isAppChildForm: true,
+          isLabelDropBoxChild: false,
+          components: [],
+          path: ['769713', 'View_769713_1', 'DForm_333712'],
+        },
+        {
+          id: 'DformFile_7403176',
+          label: '上传附件',
+          compName: 'DformFile',
+          type: 'DformFile',
+          compType: 2,
+          compLib: '@/components',
+          props: {
+            name: '上传附件',
+            hasTitleIcon: 'none',
+            listStyle: 'text',
+            isWatermark: false,
+            dformType: 'DformFile',
+            title: '上传附件',
+            placeholder: '请输入',
+            positionType: 'vertical',
+            status: '1',
+            filesDownloaded: false,
+            alias: {
+              title: 'fileName',
+              id: 'fileId',
+            },
+            deleteBtn: {
+              btnText: '删除',
+              checked: true,
+              icon: {
+                type: 'close',
+                theme: 'outlined',
+                fontAddress: '',
+                isIconFont: false,
+                iconFileInfo: {},
+              },
+            },
+            downloadBtn: {
+              btnText: '下载',
+              checked: true,
+              icon: {
+                type: 'download',
+                theme: 'outlined',
+                fontAddress: '',
+                isIconFont: false,
+                iconFileInfo: {},
+              },
+            },
+            previewBtn: {
+              btnText: '预览',
+              checked: true,
+              icon: {
+                type: 'eye',
+                theme: 'outlined',
+                fontAddress: '',
+                isIconFont: false,
+                iconFileInfo: {},
+              },
+            },
+            numberLimit: 5,
+            singleFileMaxSize: '50MB',
+            btnIcon: {
+              type: 'upload',
+              theme: 'outlined',
+              fontAddress: '',
+              isIconFont: false,
+              iconFileInfo: {},
+            },
+            uploadStyle: 'button',
+            uploadBtnStyle: 'text',
+            showBtnIcon: false,
+            iconPosition: 'left',
+            btnText: '上传附件',
+            fieldProps: 'dssd',
+          },
+          style: {},
+          isContainer: false,
+          isBusiObjContainer: false,
+          cmdgroup: ['basic'],
+          platform: 'h5',
+          fieldProps: {
+            trigger: 'onChange',
+            valuePropName: 'defaultValue',
+          },
+          engineApi: [
+            'downloadByFileId',
+            'downFieldPrefix',
+            'http',
+            'BannerModal',
+            'downloadFileByFileCode',
+            'getMaterialFile',
+          ],
+          setEvents: [],
+          description: '',
+          image: '',
+          groupsName: '表单',
+          isAppChildForm: true,
+          isLabelDropBoxChild: false,
+          components: [],
+          path: ['769713', 'View_769713_1', 'DForm_7287887'],
         },
         {
           id: 'DformSelect_016298',

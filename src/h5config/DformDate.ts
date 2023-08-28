@@ -1,5 +1,5 @@
-export const DMultiplePicker = {
-  type: 'DMultiplePicker',
+export const DformDate = {
+  type: 'DformDate',
   variable: {
     iconColor: {
       type: 'color',
@@ -118,8 +118,8 @@ export const DMultiplePicker = {
     },
   },
   groupsName: '表单',
-  icon: 'icon-ico-comp-app-DMultiplePicker',
-  title: '多项选择',
+  icon: 'icon-ico-comp-app-DformDate',
+  title: '时间选择',
   defaultValue: [{}],
   tpl: ``,
   components: [
@@ -154,40 +154,35 @@ export const DMultiplePicker = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'DMultiplePicker_919181',
-          label: '多项选择',
-          compName: 'DMultiplePicker',
-          type: 'DMultiplePicker',
+          id: 'DformDate_746611',
+          label: '时间选择',
+          compName: 'DformDate',
+          type: 'DformDate',
           compType: 2,
           compLib: '@/components',
           props: {
-            name: '多项选择',
-            valueType: 'ellipsis',
+            name: '时间选择',
             titleIcon: 'none',
             postfix: '',
             postfixIconPosition: 'before',
-            title: '多项选择',
-            dformType: 'DMultiplePicker',
+            title: '时间选择',
+            dformType: 'DformDate',
             positionType: 'horizontal',
             status: '1',
-            options: [
-              {
-                label: '选项1',
-                value: 'options1',
-                id: 'options1',
-              },
-              {
-                label: '选项2',
-                value: 'options2',
-                id: 'options2',
-              },
-            ],
+            modeType: 'date',
+            chooseType: 'DatePicker',
+            replaceName: {
+              年: '-',
+              月: '-',
+              日: '',
+            },
             icon: {
               isIconFont: false,
               theme: 'outlined',
               type: 'right',
             },
-            fieldProps: 'fecss',
+            formatter: 'YYYY-MM-DD',
+            fieldProps: 'asds',
           },
           style: {},
           isContainer: false,

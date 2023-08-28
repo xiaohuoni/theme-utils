@@ -1,6 +1,11 @@
-export const DMultiplePicker = {
-  type: 'DMultiplePicker',
+export const DformRangePicker = {
+  type: 'DformRangePicker',
   variable: {
+    iconLineColor: {
+      type: 'color',
+      label: '时间分割符颜色',
+      groupsName: '图标',
+    },
     iconColor: {
       type: 'color',
       label: '后缀图标颜色',
@@ -118,10 +123,16 @@ export const DMultiplePicker = {
     },
   },
   groupsName: '表单',
-  icon: 'icon-ico-comp-app-DMultiplePicker',
-  title: '多项选择',
-  defaultValue: [{}],
-  tpl: ``,
+  icon: 'icon-ico-comp-rangepicker',
+  title: '时间段选择',
+  defaultValue: [
+    {
+      iconLineColor: 'rgba(0, 0, 0, 0.45)',
+    },
+  ],
+  tpl: `.lingxiteam-dform-line{
+      color: iconLineColor;
+    }`,
   components: [
     {
       id: 'DForm_333712',
@@ -154,55 +165,43 @@ export const DMultiplePicker = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'DMultiplePicker_919181',
-          label: '多项选择',
-          compName: 'DMultiplePicker',
-          type: 'DMultiplePicker',
+          id: 'DformRangePicker_245198',
+          label: '时间段选择',
+          compName: 'DformRangePicker',
+          type: 'DformRangePicker',
           compType: 2,
           compLib: '@/components',
           props: {
-            name: '多项选择',
-            valueType: 'ellipsis',
-            titleIcon: 'none',
-            postfix: '',
-            postfixIconPosition: 'before',
-            title: '多项选择',
-            dformType: 'DMultiplePicker',
+            name: '时间段选择',
+            separatorStr: '～',
             positionType: 'horizontal',
+            hasTitleIcon: 'none',
+            title: '时间段选择',
+            dformType: 'DformRangePicker',
             status: '1',
-            options: [
-              {
-                label: '选项1',
-                value: 'options1',
-                id: 'options1',
-              },
-              {
-                label: '选项2',
-                value: 'options2',
-                id: 'options2',
-              },
-            ],
-            icon: {
-              isIconFont: false,
-              theme: 'outlined',
-              type: 'right',
-            },
-            fieldProps: 'fecss',
+            selectType: 'multiple',
+            optionsLayout: 'horizontal',
+            formatter: 'YYYY-MM-DD',
+            modeType: 'date',
+            inputContent: '1',
+            fieldProps: 'asdsa',
           },
-          style: {},
+          style: {
+            inputContent: '1',
+          },
           isContainer: false,
           isBusiObjContainer: false,
           cmdgroup: ['basic'],
           platform: 'h5',
+          setEvents: [],
+          description: '',
+          image: '',
+          groupsName: '表单',
           fieldProps: {
             trigger: 'onChange',
             valuePropName: 'defaultValue',
           },
           engineApi: ['downloadFileByFileCode', 'getMaterialFile'],
-          setEvents: [],
-          description: '',
-          image: '',
-          groupsName: '表单',
           isAppChildForm: true,
           isLabelDropBoxChild: false,
           components: [],

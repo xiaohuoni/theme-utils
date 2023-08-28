@@ -5,7 +5,6 @@ import { useRef } from 'react';
 import { insertRules, normalizeCSS, stringifyCssByType } from '../../../src';
 import { Link as config } from '../../../src/config/Link';
 const { Link: comConfig } = indexConfig.default;
-console.log(comConfig.props);
 function Page({}) {
   const ref = useRef(null);
   return (
@@ -14,7 +13,6 @@ function Page({}) {
         onClick={() => {
           const css = stringifyCssByType('Link', config.default[0]);
           const css1 = normalizeCSS(css, '#previewId');
-          console.log(css1);
           insertRules('id', css1, ref.current!);
         }}
       >

@@ -1,5 +1,5 @@
-export const DMultiplePicker = {
-  type: 'DMultiplePicker',
+export const DformSelect = {
+  type: 'DformSelect',
   variable: {
     iconColor: {
       type: 'color',
@@ -118,8 +118,8 @@ export const DMultiplePicker = {
     },
   },
   groupsName: '表单',
-  icon: 'icon-ico-comp-app-DMultiplePicker',
-  title: '多项选择',
+  icon: 'icon-ico-comp-app-DformSelect',
+  title: '多列选择',
   defaultValue: [{}],
   tpl: ``,
   components: [
@@ -154,55 +154,90 @@ export const DMultiplePicker = {
       isLabelDropBoxChild: false,
       components: [
         {
-          id: 'DMultiplePicker_919181',
-          label: '多项选择',
-          compName: 'DMultiplePicker',
-          type: 'DMultiplePicker',
+          id: 'DformSelect_016298',
+          label: '多列选择',
+          compName: 'DformSelect',
+          type: 'DformSelect',
           compType: 2,
           compLib: '@/components',
           props: {
-            name: '多项选择',
-            valueType: 'ellipsis',
+            name: '多列选择',
             titleIcon: 'none',
             postfix: '',
             postfixIconPosition: 'before',
-            title: '多项选择',
-            dformType: 'DMultiplePicker',
+            dformType: 'DformSelect',
+            data: [],
+            title: '多列选择器',
+            placeholder: '请选择',
             positionType: 'horizontal',
             status: '1',
-            options: [
-              {
-                label: '选项1',
-                value: 'options1',
-                id: 'options1',
-              },
-              {
-                label: '选项2',
-                value: 'options2',
-                id: 'options2',
-              },
-            ],
             icon: {
               isIconFont: false,
               theme: 'outlined',
               type: 'right',
             },
-            fieldProps: 'fecss',
+            fieldProps: 'qwed',
+            options: [
+              {
+                label: '标题',
+                key: '123176',
+                $$isParent: true,
+                title: '标题',
+                children: [
+                  {
+                    label: '标题',
+                    key: '045079',
+                    title: '标题',
+                    value: '045079',
+                  },
+                  {
+                    label: '标题',
+                    key: '9057055',
+                    title: '标题',
+                    value: '9057055',
+                  },
+                ],
+                value: '123176',
+              },
+              {
+                label: '标题',
+                key: '638287',
+                $$isParent: true,
+                title: '标题',
+                children: [
+                  {
+                    label: '标题',
+                    key: '879889',
+                    title: '标题',
+                    value: '879889',
+                  },
+                  {
+                    label: '标题',
+                    key: '672462',
+                    title: '标题',
+                    value: '672462',
+                  },
+                ],
+                value: '638287',
+              },
+            ],
           },
-          style: {},
+          style: {
+            textAlign: 'right',
+          },
           isContainer: false,
           isBusiObjContainer: false,
           cmdgroup: ['basic'],
           platform: 'h5',
-          fieldProps: {
-            trigger: 'onChange',
-            valuePropName: 'defaultValue',
-          },
           engineApi: ['downloadFileByFileCode', 'getMaterialFile'],
           setEvents: [],
           description: '',
           image: '',
           groupsName: '表单',
+          fieldProps: {
+            trigger: 'onChange',
+            valuePropName: 'defaultValue',
+          },
           isAppChildForm: true,
           isLabelDropBoxChild: false,
           components: [],
