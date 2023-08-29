@@ -64,7 +64,7 @@ export const Button = {
   `,
   components: [
     {
-      id: 'Button_726243',
+      id: 'Button_1229334',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -90,8 +90,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontWeight: 400,
-        height: '32px',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -105,10 +103,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['8485714', 'View_8485714_1'],
+      path: ['761872', 'View_761872_1'],
     },
     {
-      id: 'Button_4610898',
+      id: 'Button_526504',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -134,8 +132,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontWeight: 400,
-        height: '32px',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -149,10 +145,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['8485714', 'View_8485714_1'],
+      path: ['761872', 'View_761872_1'],
     },
     {
-      id: 'Button_03196897',
+      id: 'Button_2208062',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -178,8 +174,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontWeight: 400,
-        height: '32px',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -193,10 +187,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['8485714', 'View_8485714_1'],
+      path: ['761872', 'View_761872_1'],
     },
     {
-      id: 'Button_060837',
+      id: 'Button_692544',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -222,8 +216,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontWeight: 400,
-        height: '32px',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -237,10 +229,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['8485714', 'View_8485714_1'],
+      path: ['761872', 'View_761872_1'],
     },
     {
-      id: 'Button_534879',
+      id: 'Button_111416',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -266,8 +258,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        fontWeight: 400,
-        height: '32px',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -281,6 +271,7 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
+      path: ['761872', 'View_761872_1'],
     },
   ],
 };

@@ -33,7 +33,7 @@ import { Description } from './config/Description';
 
 export const ASSETS_CSS_TPL: any = {
   // TODO: 按钮 style 写死，最后修改方案
-  // Button,
+  Button,
   Container,
   Form,
   Card,

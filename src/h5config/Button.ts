@@ -4,11 +4,10 @@ export const Button = {
     textColor: { type: 'color', label: '文本颜色', groupsName: '文字' },
     lineHeight: { type: 'px', label: '文本行高', groupsName: '文字' },
     fontSize: { type: 'px', label: '文本尺寸', groupsName: '文字' },
-
     backgroundColor: {
       type: 'color',
-      label: '背景颜色',
-      groupsName: '背景颜色',
+      label: '主题颜色',
+      groupsName: '颜色',
     },
     borderColor: { type: 'color', label: '边框颜色', groupsName: '边框' },
     borderRadius: { type: 'px', label: '边框圆角', groupsName: '边框' },
@@ -21,32 +20,43 @@ export const Button = {
   defaultValue: [
     {
       textColor: '#1c242e',
-      lineHeight: '0px',
-      fontSize: '14px',
+      lineHeight: '140%',
+      fontSize: '18px',
       backgroundColor: '#108ee9',
-      borderColor: '#108ee9',
-      borderRadius: '8px',
-      paddingValue: '4px 24px 4px 24px',
+      borderColor: '#E5E5E5',
+      borderRadius: '4px',
+      paddingValue: '7px 12px 7px 12px',
       marginValue: '0px',
     },
   ],
   tpl: `
-  .adm-button:not(.adm-button-default){
-    --text-color: textColor;
-    --background-color: backgroundColor;
+  .adm-button{
     --border-color: borderColor;
-  }
-  .adm-button {
+    color: textColor;
     line-height: lineHeight;
     font-size: fontSize;
     border-radius: borderRadius;
     padding: paddingValue;
     margin: marginValue;
   }
+  .adm-button.adm-button-large{
+    font-size: fontSize;
+    padding: paddingValue;
+    margin: marginValue;
+  }
+  .adm-button:not(.adm-button-default){
+    color: #fff;
+  }
+  .adm-button-primary{
+    --color: backgroundColor;
+  }
+  .lcdp-button-type-link{
+    color: backgroundColor;
+  }
     `,
   components: [
     {
-      id: 'Button_884953',
+      id: 'Button_5647878',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -65,10 +75,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        color: '#fff',
-        fontSize: 18,
-        fontWeight: 400,
-        height: '48px',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -85,10 +91,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['454426', 'View_454426_1'],
+      path: ['769713', 'View_769713_1'],
     },
     {
-      id: 'Button_1865714',
+      id: 'Button_404175',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -107,13 +113,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        color: '#1C242E',
-        fontSize: 18,
-        fontWeight: 400,
-        height: '48px',
-        borderSetting: 'border 1px solid #E5E5E5',
-        backgroundColor: '#FFF',
-        border: '1px solid #E5E5E5',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -130,10 +129,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['454426', 'View_454426_1'],
+      path: ['769713', 'View_769713_1'],
     },
     {
-      id: 'Button_542667',
+      id: 'Button_9353077',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -152,13 +151,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        color: '#1C242E',
-        fontSize: 18,
-        fontWeight: 400,
-        height: '48px',
-        borderSetting: 'border 1px dashed #E5E5E5',
-        backgroundColor: '#FFF',
-        border: '1px dashed #E5E5E5',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -175,10 +167,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['454426', 'View_454426_1'],
+      path: ['769713', 'View_769713_1'],
     },
     {
-      id: 'Button_268389',
+      id: 'Button_764117',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -197,13 +189,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        color: '#1C242E',
-        fontSize: 18,
-        fontWeight: 400,
-        height: '48px',
-        borderSetting: '',
-        backgroundColor: '#FFF',
-        border: '',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -220,10 +205,10 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['454426', 'View_454426_1'],
+      path: ['769713', 'View_769713_1'],
     },
     {
-      id: 'Button_5859534',
+      id: 'Button_637341',
       label: '按钮',
       compName: 'Button',
       type: 'Button',
@@ -231,7 +216,7 @@ export const Button = {
       compLib: '@/components',
       props: {
         name: '按钮',
-        btnIcon: 'none',
+        btnIcon: false,
         type: 'link',
         size: 'large',
         loading: false,
@@ -242,13 +227,6 @@ export const Button = {
       },
       style: {
         textAlign: 'center',
-        color: '#47E',
-        fontSize: 18,
-        fontWeight: 400,
-        height: '48px',
-        borderSetting: '',
-        backgroundColor: '',
-        border: '',
       },
       isContainer: false,
       isBusiObjContainer: false,
@@ -265,7 +243,7 @@ export const Button = {
       setEvents: [],
       isLabelDropBoxChild: false,
       components: [],
-      path: ['454426', 'View_454426_1'],
+      path: ['769713', 'View_769713_1'],
     },
   ],
 };

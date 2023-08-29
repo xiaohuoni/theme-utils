@@ -32,8 +32,8 @@ import { Accordion } from './h5config/Accordion';
 export const MOBILE_ASSETS_CSS_TPL: any = {
   Icon,
   ALink,
-  // TODO: 按钮，分割线 style 写死，最后修改方案
-  // Button,
+  Button,
+  // TODO: 分割线 style 写死，最后修改方案
   // Divider,
   Card,
   Table,
