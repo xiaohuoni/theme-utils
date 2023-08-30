@@ -64,10 +64,6 @@ width: iconSize;
 height: iconSize;
       }
     }
-
-    .adm-swiper {
-
-    }
   }`,
   components: [
     {

@@ -30,35 +30,39 @@ export const Button = {
     },
   ],
   tpl: `
-    .ued-button-wrap.pcfactory-btn {
+.ued-button-wrap.pcfactory-btn {
       line-height: lineHeight;
       font-size: fontSize;
       padding: paddingValue;
       margin: marginValue;
     }
-  .ued-button-wrap.pcfactory-btn-primary {
+.ued-button-wrap.pcfactory-btn-primary {
       background-color: backgroundColor;
       border-color: borderColor;
       border-radius: borderRadius;
     }
-    .ued-button-wrap.pcfactory-btn-default {
+.ued-button-wrap.pcfactory-btn-default {
       color: textColor;
       border-color: borderColor;
       border-radius: borderRadius;
     }
-    .ued-button-wrap.pcfactory-btn-dashed {
+.ued-button-wrap.pcfactory-btn-dashed {
       color: textColor;
       border-color: borderColor;
       border-radius: borderRadius;
     }
-    .ued-button-wrap.pcfactory-btn.pcfactory-btn-dashed:hover, .ued-button-wrap.pcfactory-btn.pcfactory-btn-default:hover {
+.ued-button-wrap.pcfactory-btn.pcfactory-btn-dashed:hover {
+      border-color: backgroundColor;
+      color: backgroundColor;
+    }
+.ued-button-wrap.pcfactory-btn.pcfactory-btn-default:hover {
       border-color: backgroundColor;
       color: backgroundColor;
   }
-    .ued-button-wrap.pcfactory-btn-text {
+.ued-button-wrap.pcfactory-btn-text {
       color: textColor;
     }
-    .ued-button-wrap.pcfactory-btn-link {
+.ued-button-wrap.pcfactory-btn-link {
       color: backgroundColor;
     }
   `,

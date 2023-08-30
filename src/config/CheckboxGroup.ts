@@ -89,10 +89,20 @@ export const CheckboxGroup = {
       border-color: radioSeBorderColor;
       background: radioSeBgColor;
     }
-    .pcfactory-checkbox-input:focus+.pcfactory-checkbox-inner, .pcfactory-checkbox-wrapper:hover .pcfactory-checkbox, .pcfactory-checkbox:hover .pcfactory-checkbox-inner {
+    .pcfactory-checkbox-input:focus+.pcfactory-checkbox-inner{
       border-color: radioSeBorderColor;
   }
-  .pcfactory-form-item input[type=checkbox], .pcfactory-form-item input[type=radio]{
+  .pcfactory-checkbox-wrapper:hover .pcfactory-checkbox{
+    border-color: radioSeBorderColor;
+}
+ .pcfactory-checkbox:hover .pcfactory-checkbox-inner {
+      border-color: radioSeBorderColor;
+  }
+  .pcfactory-form-item input[type=checkbox]{
+    width: radioSize;
+    height: radioSize;
+  }
+   .pcfactory-form-item input[type=radio]{
     width: radioSize;
     height: radioSize;
   }

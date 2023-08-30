@@ -99,14 +99,25 @@ export const Card = {
     border-top-left-radius: borderRadius;
     border-top-right-radius: borderRadius;
   }
-  .ued-card.pcfactory-card-bordered, .ued-card.pcfactory-card-bordered {
+  .ued-card.pcfactory-card-bordered {
     border-color: borderColor;
   }
-  .ued-card .ued-card-title-icon-auto>i, .ued-card .ued-card-title-icon-auto span{
+  .ued-card.pcfactory-card-bordered {
+    border-color: borderColor;
+  }
+  .ued-card .ued-card-title-icon-auto>i {
     color: titleColor;
     margin-right: tagMargin;
   }
-    .ued-card .ued-card-title-icon-auto>i svg, .ued-card .ued-card-title-icon-auto span svg{
+  .ued-card .ued-card-title-icon-auto span{
+    color: titleColor;
+    margin-right: tagMargin;
+  }
+    .ued-card .ued-card-title-icon-auto>i svg{
+      width: tagSize;
+      height: tagSize;
+  }
+   .ued-card .ued-card-title-icon-auto span svg{
       width: tagSize;
       height: tagSize;
   }

@@ -71,7 +71,10 @@ export const DformImagePicker = {
     border-radius: btnBorderRadius;
     background-color: btnBgColor;
   }
-  .lingxiteam-dform-image-picker-upload-item::after, .lingxiteam-dform-image-picker-upload-item::before{
+  .lingxiteam-dform-image-picker-upload-item::after{
+    background-color: btnIconColor;
+  }
+   .lingxiteam-dform-image-picker-upload-item::before{
     background-color: btnIconColor;
   }`,
   components: [

@@ -206,24 +206,84 @@ export const Table = {
   .ued-table-wrap .ued-table .pcfactory-table-thead>tr:first-child>th:last-child{
     border-top-right-radius: tbBorderRadius;
   }
-  .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-body>table>tbody>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-body>table>tfoot>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-body>table>tfoot>tr>th,  .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>tbody>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>tfoot>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>tfoot>tr>th, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>thead>tr>th, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>tbody>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>tfoot>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>tfoot>tr>th, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>thead>tr>th, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>tbody>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>tfoot>tr>td, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>tfoot>tr>th, .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>thead>tr>th{
+  .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-body>table>tbody>tr>td{
     border-color: tbBorderColor;
   }
-  .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>thead>tr>th, .ued-table-filters .ued-table .pcfactory-table-thead>tr>th, .ued-table-wrap .ued-table .pcfactory-table-thead>tr>th{
-    border-bottom: headLineSize solid headLineColor;
-    // border-color:  headLineColor;
+   .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-body>table>tfoot>tr>td{
+    border-color: tbBorderColor;
   }
-  .ued-table-filters .ued-table .pcfactory-table-tbody>tr>td, .ued-table-wrap .ued-table .pcfactory-table-tbody>tr>td{
+   .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-body>table>tfoot>tr>th{
+    border-color: tbBorderColor;
+  }
+    .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>tbody>tr>td{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>tfoot>tr>td{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>tfoot>tr>th{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>thead>tr>th{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>tbody>tr>td{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>tfoot>tr>td{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>tfoot>tr>th{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-header>table>thead>tr>th{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>tbody>tr>td{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>tfoot>tr>td{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>tfoot>tr>th{
+      border-color: tbBorderColor;
+    }
+     .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-summary>table>thead>tr>th{
+    border-color: tbBorderColor;
+  }
+  .pcfactory-table.pcfactory-table-bordered>.pcfactory-table-container>.pcfactory-table-content>table>thead>tr>th{
+    border-bottom: headLineSize solid headLineColor;
+  }
+  .ued-table-filters .ued-table .pcfactory-table-thead>tr>th{
+    border-bottom: headLineSize solid headLineColor;
+  }
+   .ued-table-wrap .ued-table .pcfactory-table-thead>tr>th{
+    border-bottom: headLineSize solid headLineColor;
+  }
+  .ued-table-filters .ued-table .pcfactory-table-tbody>tr>td{
     border-color: tbBorderColor;
     padding: bodyPadding;
     color: bodyTextColor;
     font-weight: bodyFontWeight;
     text-align: bodyTextAlign;
   }
-  .ued-table-filters .ued-table .pcfactory-table-bordered, .ued-table-wrap .ued-table .pcfactory-table-bordered{
+   .ued-table-wrap .ued-table .pcfactory-table-tbody>tr>td{
+    border-color: tbBorderColor;
+    padding: bodyPadding;
+    color: bodyTextColor;
+    font-weight: bodyFontWeight;
+    text-align: bodyTextAlign;
+  }
+  .ued-table-filters .ued-table .pcfactory-table-bordered{
     border-color: tbBorderColor;
   }
-  .ued-table-filters .ued-table-page .pcfactory-pagination-item-active, .ued-table-wrap .ued-table-page .pcfactory-pagination-item-active{
+   .ued-table-wrap .ued-table .pcfactory-table-bordered{
+    border-color: tbBorderColor;
+  }
+  .ued-table-filters .ued-table-page .pcfactory-pagination-item-active{
+    background: selectPaginationColor;
+  }
+   .ued-table-wrap .ued-table-page .pcfactory-pagination-item-active{
     background: selectPaginationColor;
   }
   .ued-table-page .pcfactory-pagination-item{
@@ -242,7 +302,10 @@ export const Table = {
     border-radius: selectPaginationRadius;
     border-color: selectPaginationBorder;
   }
-  .ued-table-filters .ued-table-zebra-stripe .pcfactory-table-row:nth-child(2n), .ued-table-wrap .ued-table-zebra-stripe .pcfactory-table-row:nth-child(2n){
+  .ued-table-filters .ued-table-zebra-stripe .pcfactory-table-row:nth-child(2n){
+    background: zebraBgColor;
+  }
+   .ued-table-wrap .ued-table-zebra-stripe .pcfactory-table-row:nth-child(2n){
     background: zebraBgColor;
   }`,
   components: [

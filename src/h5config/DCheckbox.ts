@@ -133,11 +133,27 @@ export const DCheckbox = {
     },
   ],
   tpl: `
-    .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton, .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-circular, .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-square{
+    .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton{
       background-color: itemBgColor;
       border-color: itemBorderRadius;
     }
-    .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-checked, .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-checked, .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-half-checked{
+     .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-circular{
+      background-color: itemBgColor;
+      border-color: itemBorderRadius;
+    }
+     .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-square{
+      background-color: itemBgColor;
+      border-color: itemBorderRadius;
+    }
+    .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-checked{
+      background-color: selectBgColor;
+      border-color: selectBorderRadius;
+    }
+     .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-checked{
+      background-color: selectBgColor;
+      border-color: selectBorderRadius;
+    }
+     .lingxiteam-dform-check-box .lingxiteam-dform-box-content .lingxiteam-dform-box-wrapper .lingxiteam-dform-box-botton-selectAll-half-checked{
       background-color: selectBgColor;
       border-color: selectBorderRadius;
     }`,

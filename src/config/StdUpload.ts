@@ -90,14 +90,27 @@ export const StdUpload = {
     },
   ],
   tpl: `
-    .ued-stdupload-wrap .pcfactory-upload-list-item-info .anticon-loading .anticon, .pcfactory-upload-list-item-info .pcfactory-upload-text-icon .anticon{
+    .ued-stdupload-wrap .pcfactory-upload-list-item-info .anticon-loading .anticon{
       color: listIconColor;
       > svg{
         width: lisIconSize;
         height: lisIconSize;
       }
     }
-    .ued-stdupload-wrap .pcfactory-upload-list-item-error, .pcfactory-upload-list-item-error .pcfactory-upload-list-item-name, .pcfactory-upload-list-item-error .pcfactory-upload-text-icon>.anticon{
+     .pcfactory-upload-list-item-info .pcfactory-upload-text-icon .anticon{
+      color: listIconColor;
+      > svg{
+        width: lisIconSize;
+        height: lisIconSize;
+      }
+    }
+    .ued-stdupload-wrap .pcfactory-upload-list-item-error{
+      color: #ff7474;
+   }
+   .pcfactory-upload-list-item-error .pcfactory-upload-list-item-name{
+    color: #ff7474;
+ }
+ .pcfactory-upload-list-item-error .pcfactory-upload-text-icon>.anticon{
        color: #ff7474;
     }
     .ued-stdupload-wrap .pcfactory-upload-list-item-info a{

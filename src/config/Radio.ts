@@ -89,10 +89,20 @@ export const Radio = {
       border-color: radioSeBorderColor;
       background: radioSeBgColor;
     }
-    .pcfactory-radio-input:focus+.pcfactory-radio-inner, .pcfactory-radio-wrapper:hover .pcfactory-radio, .pcfactory-radio:hover .pcfactory-radio-inner {
+    .pcfactory-radio-input:focus+.pcfactory-radio-inner{
       border-color: radioSeBorderColor;
   }
-  .pcfactory-form-item input[type=checkbox], .pcfactory-form-item input[type=radio]{
+   .pcfactory-radio-wrapper:hover .pcfactory-radio{
+    border-color: radioSeBorderColor;
+}
+ .pcfactory-radio:hover .pcfactory-radio-inner {
+      border-color: radioSeBorderColor;
+  }
+  .pcfactory-form-item input[type=checkbox]{
+    width: radioSize;
+    height: radioSize;
+  }
+   .pcfactory-form-item input[type=radio]{
     width: radioSize;
     height: radioSize;
   }
