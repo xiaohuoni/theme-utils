@@ -57,7 +57,8 @@ export function parseCss(tpl: string, a: string) {
 export function normalizeCSS(css: string, selector?: string) {
   let mergeCss = css;
   if (selector) {
-    mergeCss = `${selector} {${css}}`;
+    const hasD = selector.startsWith('.') || selector.startsWith('#');
+    mergeCss = `${hasD?'':'.'}${selector} {${css}}`;
   }
   const compiled = compile(mergeCss);
   return serialize(compiled, stringify);
