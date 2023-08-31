@@ -649,6 +649,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lingxiteam/theme-utils@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@lingxiteam/theme-utils@workspace:."
+  dependencies:
+    "@types/stylis": ^4.2.0
+    esno: ^0.17.0
+    father: ^4.3.0
+    prettier: ^2.6.2
+    prettier-plugin-organize-imports: ^2.3.4
+    prettier-plugin-packagejson: ^2.2.18
+    stylis: ^4.3.0
+  peerDependencies:
+    antd: 4.18.8
+  languageName: unknown
+  linkType: soft
+
 "@microsoft/api-extractor-model@npm:7.27.5":
   version: 7.27.5
   resolution: "@microsoft/api-extractor-model@npm:7.27.5"
@@ -6254,22 +6270,6 @@ __metadata:
   checksum: a94a25e298b962e86c239b0e1b2e5faca9772ed60384030e3128f3d2f1019f9c41902946a81d1532977690429eca09056eeae84a65dff2eac538a0a0d2fae6e7
   languageName: node
   linkType: hard
-
-"theme-utils@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "theme-utils@workspace:."
-  dependencies:
-    "@types/stylis": ^4.2.0
-    esno: ^0.17.0
-    father: ^4.3.0
-    prettier: ^2.6.2
-    prettier-plugin-organize-imports: ^2.3.4
-    prettier-plugin-packagejson: ^2.2.18
-    stylis: ^4.3.0
-  peerDependencies:
-    antd: 4.18.8
-  languageName: unknown
-  linkType: soft
 
 "thread-stream@npm:^0.15.1":
   version: 0.15.2
