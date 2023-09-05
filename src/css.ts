@@ -65,16 +65,19 @@ export function normalizeCSS(css: string, selector?: string) {
 }
 
 // 这个解法不是特别好，但是组件有些是有嵌套的 div 有些是没有嵌套，所以给可用的 class 添加一个 &. 的样式前缀
-export function prefixCSS(css: string, prefix?: string ) {
+export function prefixCSS(css: string, prefix?: string) {
   if (prefix) {
     const hasD = prefix.startsWith('.') || prefix.startsWith('#');
     const prefixCss = `${hasD ? '' : '.'}${prefix}`;
-    return css.split('\n').map(i=>{
-      if(i.trimStart().startsWith('.')){
-        return `${prefixCss}${i.trimStart()}`;
-      }
-      return i;
-    }).join('\n');
+    return css
+      .split('\n')
+      .map((i) => {
+        if (i.trimStart().startsWith('.')) {
+          return `${prefixCss}${i.trimStart()}`;
+        }
+        return i;
+      })
+      .join('\n');
   }
   return css;
 }

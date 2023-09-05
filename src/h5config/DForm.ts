@@ -155,6 +155,7 @@ export const DForm = {
     text-align: headTextAlign;
     font-size: fontSize;
 }
+
 .lingxiteam-dform-radio-label{
   color: textColor;
   line-height: lineHeight;

@@ -61,6 +61,12 @@ export const Cascader = {
       type: 'px',
       label: '下拉图标尺寸',
       groupsName: '文字',
+      desc: '请根据实际【文本尺寸】调整，不宜与【文本尺寸】大小差异过大',
+    },
+    iconTop: {
+      type: 'px',
+      label: '下拉图标距离顶部',
+      groupsName: '文字',
     },
     iconColor: {
       type: 'color',
@@ -74,6 +80,7 @@ export const Cascader = {
   defaultValue: [
     {
       iconFontSize: '12px',
+      iconTop: '16px',
       iconColor: 'rgba(28,36,46,.25)',
     },
   ],
@@ -81,6 +88,7 @@ export const Cascader = {
       color: iconColor;
       width: iconFontSize;
       height: iconFontSize;
+      top: iconTop;
       .anticon>svg{
         width: iconFontSize;
         height: iconFontSize;
@@ -90,6 +98,7 @@ export const Cascader = {
       color: iconColor;
       width: iconFontSize;
       height: iconFontSize;
+      top: iconTop;
       .anticon>svg{
         width: iconFontSize;
         height: iconFontSize;

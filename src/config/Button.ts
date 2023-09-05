@@ -3,7 +3,7 @@ export const Button = {
   variable: {
     textColor: { type: 'color', label: '文本颜色', groupsName: '文字' },
     lineHeight: { type: 'px', label: '文本行高', groupsName: '文字' },
-    fontSize: { type: 'px', label: '文本尺寸', groupsName: '文字' },
+    fontSize: { type: 'px', label: '文本尺寸', groupsName: '文字' ,  desc: '按钮高度不会随着文字大小变化，因为按钮有4种大小规格', },
     backgroundColor: {
       type: 'color',
       label: '背景颜色',

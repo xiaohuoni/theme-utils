@@ -116,6 +116,8 @@ export const Form = {
     .verificationCodePC-inputContent{
       border-color: itemBorderColor;
       border-radius: itemBorderRadius;
+      height: auto;
+      min-height: 32px;
     }
     .pcfactory-radio-wrapper{
       color: textColor;
@@ -129,17 +131,35 @@ export const Form = {
       color: textColor;
       font-size: fontSize;
     }
-    .ued-select-checked-tag{
+    .pcfactory-select-multiple .ued-select-checked-tag{
+      color: textColor;
+      font-size: fontSize;
+      min-height: 24px;
+      height: auto;
+      padding: 4px 8px 4px 8px;
+    }
+    .pcfactory-select-single:not(.pcfactory-select-customize-input) .pcfactory-select-selector::after{
+      line-height: fontSize;
+    }
+    span.pcfactory-radio+*{
       color: textColor;
       font-size: fontSize;
     }
     .pcfactory-select-selector{
+      height: auto;
       border-color: itemBorderColor;
       border-radius: itemBorderRadius;
     }
     .ued-select-wrap .pcfactory-select-selection-item{
       color: textColor;
       font-size: fontSize;
+    }
+    .pcfactory-checkbox+span{
+      color: textColor;
+      font-size: fontSize;
+    }
+    .ued-stdupload-wrap .pcfactory-upload.pcfactory-upload-select.pcfactory-upload-select-text button{
+      height: auto;
     }
     .ued-cascader-wrap .pcfactory-select-selection-item{
       color: textColor;
@@ -168,10 +188,15 @@ export const Form = {
     .pcfactory-select:not(.pcfactory-select-customize-input) .pcfactory-select-selector{
       border-color: itemBorderColor;
       border-radius: itemBorderRadius;
+      height: auto;
+      min-height: 32px;
     }
-    .pcfactory-slider-handle{
-      width: fontSize;
-      height: fontSize;
+    .pcfactory-select-single .pcfactory-select-selector .pcfactory-select-selection-item, .pcfactory-select-single .pcfactory-select-selector .pcfactory-select-selection-placeholder{
+      line-height: 2;
+      font-size: fontSize;
+    }
+    .pcfactory-select-multiple .pcfactory-select-selection-placeholder{
+      font-size: fontSize;
     }
     .ued-rateContainer .pcfactory-rate{
       font-size: fontSize;

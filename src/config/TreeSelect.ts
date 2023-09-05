@@ -61,10 +61,16 @@ export const TreeSelect = {
       type: 'px',
       label: '下拉图标尺寸',
       groupsName: '文字',
+      desc: '请根据实际【文本尺寸】调整，不宜与【文本尺寸】大小差异过大',
     },
     iconColor: {
       type: 'color',
       label: '下拉图标颜色',
+      groupsName: '文字',
+    },
+    iconTop: {
+      type: 'px',
+      label: '下拉图标距离顶部',
       groupsName: '文字',
     },
   },
@@ -75,12 +81,14 @@ export const TreeSelect = {
     {
       iconFontSize: '12px',
       iconColor: 'rgba(28,36,46,.25)',
+      iconTop: '16px',
     },
   ],
   tpl: `.ued-treeSelect-wrap .pcfactory-select-arrow{
       color: iconColor;
       width: iconFontSize;
       height: iconFontSize;
+      top: iconTop;
       .anticon>svg{
         width: iconFontSize;
         height: iconFontSize;
@@ -90,6 +98,7 @@ export const TreeSelect = {
       color: iconColor;
       width: iconFontSize;
       height: iconFontSize;
+      top: iconTop;
       .anticon>svg{
         width: iconFontSize;
         height: iconFontSize;

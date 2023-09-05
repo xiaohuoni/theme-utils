@@ -113,6 +113,10 @@ export const Card = {
     color: titleColor;
     margin-right: tagMargin;
   }
+  .ued-card .ued-card-title::before {
+    color: titleColor;
+    margin-right: tagMargin;
+  }
     .ued-card .ued-card-title-icon-auto>i svg{
       width: tagSize;
       height: tagSize;
